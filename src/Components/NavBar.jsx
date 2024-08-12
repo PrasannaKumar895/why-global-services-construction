@@ -11,7 +11,7 @@ const NavBar = () => {
     let links = [
         { name: "HOME", link: "/" },
         {
-            name: "SERVICES", link: "#", subLinks: [
+            name: "SERVICES", link: "/services", subLinks: [
                 { name: "ARCHITECTURAL DESIGN", link: "/" },
                 { name: "PROJECT MANAGEMENT", link: "/" },
                 { name: "CONSTRUCTION PLANNING", link: "/" },
@@ -33,7 +33,7 @@ const NavBar = () => {
         },
         { name: "ABOUT", link: "/about-us" },
         { name: "BLOG", link: "/blog" },
-        { name: "CONTACT", link: "/contact-us" },
+        { name: "CONTACT", link: "/contact" },
     ];
 
     return (

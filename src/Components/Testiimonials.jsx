@@ -33,28 +33,22 @@ export const Testimonials = () => {
       return (
         <div className="w-full h-auto lg:h-[100vh] flex flex-col lg:flex-row p-4 lg:p-10 bg-orange-600">
           {/* Left Side Div */}
-          <div className="lg:w-1/2 w-full flex justify-center items-center mb-8 lg:mb-0">
-            <div className="max-w-4xl mx-auto px-4">
-              <div className="bg-white shadow-lg rounded-2xl p-6 lg:p-8 mx-auto">
-                <p className="text-orange-600 text-2xl lg:text-3xl font-bold mb-4 text-center">Get in touch</p>
-                <form>
-                  <div className="grid gap-4 md:grid-cols-2">
+          <div className="lg:w-1/2 w-full flex justify-center items-center mb-8 lg:mb-0 lg:h-full">
+            <div className="w-full h-full flex justify-center items-center">
+              <div className="bg-white shadow-lg rounded-2xl p-6 lg:p-8 max-w-md lg:max-w-lg w-full h-full flex flex-col">
+                <p className="text-orange-600 text-2xl lg:text-3xl font-bold mb-4 text-center">Get Quotation</p>
+                <form className="flex flex-col h-full">
+                  <div className="grid gap-4 md:grid-cols-2 flex-grow">
                     <div>
-                      <p className="text-black text-base lg:text-lg font-semibold mb-2 lg:mb-3">First Name</p>
+                      <p className="text-black text-base lg:text-lg font-semibold mb-2 lg:mb-3"> Name</p>
                       <input className="w-full h-10 lg:h-12 px-3 lg:px-4 text-base lg:text-lg border-b-2 border-gray-300 focus:outline-none rounded-md" type="text" name="FirstName" />
                     </div>
-                    <div>
-                      <p className="text-black text-base lg:text-lg font-semibold mb-2 lg:mb-3">Last Name</p>
-                      <input className="w-full h-10 lg:h-12 px-3 lg:px-4 text-base lg:text-lg border-b-2 border-gray-300 focus:outline-none rounded-md" type="text" name="LastName" />
-                    </div>
+                    
                     <div>
                       <p className="text-black text-base lg:text-lg font-semibold mb-2 lg:mb-3">Email</p>
                       <input className="w-full h-10 lg:h-12 px-3 lg:px-4 text-base lg:text-lg border-b-2 border-gray-300 focus:outline-none rounded-md" type="email" name="Email" />
                     </div>
-                    <div>
-                      <p className="text-black text-base lg:text-lg font-semibold mb-2 lg:mb-3">Phone No.</p>
-                      <input className="w-full h-10 lg:h-12 px-3 lg:px-4 text-base lg:text-lg border-b-2 border-gray-300 focus:outline-none rounded-md" type="tel" name="PhoneNumber" />
-                    </div>
+                   
                     <div className="md:col-span-2">
                       <p className="text-black text-base lg:text-lg font-semibold mb-2 lg:mb-3">Message</p>
                       <textarea className="w-full h-24 lg:h-32 px-3 lg:px-4 text-base lg:text-lg border-2 border-gray-200 rounded-lg bg-gray-100 focus:outline-none" placeholder="Write your message..."></textarea>
@@ -69,10 +63,10 @@ export const Testimonials = () => {
           </div>
     
           {/* Right Side Div for Slides */}
-          <div className="lg:w-1/2 w-full h-auto lg:h-full relative overflow-hidden">
-            <p className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-white p-4 md:p-8 text-center">Testimonials</p>
+          <div className="lg:w-1/2 w-full h-auto lg:h-full relative pb-0 overflow-hidden">
+            <p className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-white p-4 md:p-8 text-center ">Testimonials</p>
             <Slide
-              className="w-full h-full flex items-center justify-center"
+              className="bg-white shadow-lg rounded-2xl p-6 lg:p-8 mx-auto"
               autoplay
               speed={6000}
               infinite

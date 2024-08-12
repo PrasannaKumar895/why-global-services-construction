@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 // import { BsFillBuildingsFill } from "react-icons/bs";
 import { FaBuildingColumns } from "react-icons/fa6";
 import { IoNewspaper } from "react-icons/io5";
@@ -11,7 +11,7 @@ import { IoHome } from "react-icons/io5";
 import { PiPlantFill } from "react-icons/pi";
 
 export const Services = () => {
-    let   services = [
+    let services = [
         { name: "Architectural Design", icon: <FaBuildingColumns />, title: "Innovative Architectural Design", description: "Our team creates visually stunning and functional architectural designs tailored to your vision and needs" },
         { name: "Project Management", icon: <IoNewspaper />, title: "Efficient Project Management", description: "We ensure your projects are completed on time and within budget with our expert project management services." },
         { name: "Construction Planning", icon: <MdOutlineConstruction />, title: "Detailed Construction Planning", description: "Our meticulous planning process guarantees every aspect of your construction project is carefully considered and executed." },
@@ -22,25 +22,40 @@ export const Services = () => {
         { name: "Sustainable Building", icon: <PiPlantFill />, title: "Sustainable Building Practices", description: "We incorporate eco-friendly and sustainable building practices to minimize environmental impact." },
     ];
 
+    const [hoveredIndex, setHoveredIndex] = useState(null);
+
     return (
-        <div className=' flex flex-col items-center rounded-lg p-4'>
-            <div className="flex flex-col items-center justify-center mb-10">
-                <h2 className='text-center text-xl md:text-2xl lg:text-[2rem] text-orange-600 font-semibold'>Comprehensive Construction Solutions</h2>
-                <p className='font-light text-sm md:text-base lg:text-lg'>From Concept to Completion</p>
+        <div className='w-[95%] flex flex-col items-center rounded-lg py-2'>
+            <div className="flex flex-col items-center justify-center mb-3">
+                <h2 className='text-center text-2xl md:text-2xl lg:text-[2rem] text-orange-600 font-semibold'>Comprehensive Construction Solutions</h2>
+                <p className='font-light text-md md:text-base lg:text-lg'>From Concept to Completion</p>
             </div>
 
-            <div className='grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 w-[90%] justify-center items-center gap-5 bg-transparent p-2'>
+            <div className='grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 lg:w-[90%] w-[80%] justify-center items-center gap-5 bg-transparent p-2'>
                 {services.map((item, index) => (
-                    <div key={index} className=' bg-white shadow-lg  h-full px-3 py-4 flex flex-col justify-center items-start gap-1 rounded-xl border-b-4 border-orange-600'>
-                        <div className='p-4 rounded-full bg-orange-600 text-white'>
+                    <div 
+                        key={index} 
+                        className='relative bg-white shadow-lg h-full flex flex-col justify-center items-start gap-4 px-8 py-8 rounded-xl border-b-4 border-orange-600 transition-all duration-500 hover:bg-white hover:text-white'
+                        onMouseEnter={() => setHoveredIndex(index)}
+                        onMouseLeave={() => setHoveredIndex(null)}
+                    >
+                        <div className={`p-6 rounded-full bg-orange-600 text-white transition-all duration-500 ${hoveredIndex === index ? 'opacity-0' : 'opacity-100'}`}>
                             {item.icon}
                         </div>
-                        <h2 className='text-orange-600 text-base md:text-lg lg:text-[0.9rem] font-bold'>{item.name}</h2>
-                        <h4 className='text-black text-sm lg:text-[0.8rem] md:text-base font-medium'>
-                            {item.title}
-                        </h4>
-                        <p className='text-xs font-normal md:text-sm lg:text-[0.9rem] text-justify text-slate-600'>{item.description}</p>
-                        <button className='border-b-2 cursor-pointer border-orange-600 text-orange-600 text-xs md:text-sm font-semibold mt-2'>Learn More</button>
+                        <h4 className='text-black lg:text-[1.1rem] md:text-base font-semibold'>
+                                    {item.title}
+                                </h4>
+                        {hoveredIndex === index && (
+                            <div className='absolute inset-0 flex flex-col justify-center items-center opacity-100 transition-opacity duration-500 gap-2 px-5 bg-gray-800 rounded-lg'>
+                                
+                                <p className='text-[0.9rem] font-normal md:text-sm lg:text-[1rem] text-justify text-white'>
+                                    {item.description}
+                                </p>
+                                <button className='border-b-2 cursor-pointer border-white hover:border-orange-600 text-orange-600 hover:text-white text-[0.9rem] md:text-sm font-semibold mt-2'>
+                                    Learn More
+                                </button>
+                            </div>
+                        )}
                     </div>
                 ))}
             </div>
