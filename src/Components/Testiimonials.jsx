@@ -1,95 +1,102 @@
-import React, { useState, useEffect } from 'react';
-import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
-import IMG3 from '../images/IMG3.jpg'
-import { useMediaQuery } from 'react-responsive';
+import React from 'react';
+import { Slide } from 'react-slideshow-image';
+import 'react-slideshow-image/dist/styles.css';
+
 
 export const Testimonials = () => {
-    const client = [
-        { name: "Client 1", img: IMG3, msg: "ArchitecX delivered first beyond our expectations with their exceptional project management and design expertise" },
-        { name: "Client 2", img: IMG3, msg: "ArchitecX delivered second beyond our expectations with their exceptional project management and design expertise" },
-        { name: "Client 3", img: IMG3, msg: "ArchitecX delivered third beyond our expectations with their exceptional project management and design expertise" },
-    ];
-
-    const [current, setCurrent] = useState(0);
-    const [isAnimating, setIsAnimating] = useState(false);
-
-    const handlePrevSlide = () => {
-        if (isAnimating) return;
-        setIsAnimating(true);
-        setCurrent(current === 0 ? client.length - 1 : current - 1);
-    };
-
-    const handleNextSlide = () => {
-        if (isAnimating) return;
-        setIsAnimating(true);
-        setCurrent(current === client.length - 1 ? 0 : current + 1);
-    };
-
-    useEffect(() => {
-        const interval = setInterval(() => {
-            handleNextSlide();
-        }, 3000);
-
-        return () => clearInterval(interval);
-    }, [current]);
-
-    useEffect(() => {
-        const timeout = setTimeout(() => {
-            setIsAnimating(false);
-        }, 600); // Match the duration with the CSS transition
-
-        return () => clearTimeout(timeout);
-    }, [current]);
-
-    return (
-        <div className='flex flex-col md:flex-row items-center justify-center bg-orange-600 text-white w-full h-full'>
-            {/* Testimonial Slider */}
-            <div className='w-full md:w-1/2 p-8 relative'>
-                <div className='relative h-full flex justify-center items-center'>
-                    <div 
-                        key={client[current].name} 
-                        className={`bg-white rounded-xl p-6 transition-transform transform hover:scale-105 duration-500 opacity-0 ease-in-out ${isAnimating ? 'opacity-100' : 'opacity-100'}`}
-                    >
-                        <img 
-                            src={client[current].img} 
-                            alt={client[current].name} 
-                            className='h-20 w-20 mx-auto rounded-full border-4 border-orange-600 transition-transform transform hover:scale-110'
-                        />
-                        <h4 className='text-xl text-orange-600 font-bold mt-4'>{client[current].name}</h4>
-                        <p className='text-sm text-black leading-7 my-3 font-normal'>{client[current].msg}</p>
+    const testimonials = [
+        {
+          name: 'Jane Doe',
+          description: "[Construction Company Name] transformed our outdated kitchen into a modern space. Their professionalism, attention to detail, and quality craftsmanship exceeded our expectations. Highly recommend!",
+          post: 'CEO',
+          profileImg: 'https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/eourInstructors3.svg',
+          reviewImg: 'https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/t82.jpg',
+        },
+        {
+          name: 'Jane Doe',
+          description:"Outstanding work on our home extension. The team was punctual, communicative, and delivered exceptional results on time. We're thrilled with the outcome!",
+          post: 'CEO',
+          profileImg: 'https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/eourInstructors3.svg',
+          reviewImg: 'https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/t82.jpg',
+        },
+        {
+          name: 'Jane Doe',
+          description:"Exceptional renovation of our commercial building. The project was completed on schedule, and the quality is top-notch. Highly satisfied with the results!"
+    
+    ,
+          post: 'CEO',
+          profileImg: 'https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/eourInstructors3.svg',
+          reviewImg: 'https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/t82.jpg',
+        },
+      ];
+    
+      return (
+        <div className="w-full h-auto lg:h-[100vh] flex flex-col lg:flex-row p-4 lg:p-10 bg-orange-600">
+          {/* Left Side Div */}
+          <div className="lg:w-1/2 w-full flex justify-center items-center mb-8 lg:mb-0">
+            <div className="max-w-4xl mx-auto px-4">
+              <div className="bg-white shadow-lg rounded-2xl p-6 lg:p-8 mx-auto">
+                <p className="text-orange-600 text-2xl lg:text-3xl font-bold mb-4 text-center">Get in touch</p>
+                <form>
+                  <div className="grid gap-4 md:grid-cols-2">
+                    <div>
+                      <p className="text-black text-base lg:text-lg font-semibold mb-2 lg:mb-3">First Name</p>
+                      <input className="w-full h-10 lg:h-12 px-3 lg:px-4 text-base lg:text-lg border-b-2 border-gray-300 focus:outline-none rounded-md" type="text" name="FirstName" />
                     </div>
-                </div>
-                {/* Left Arrow */}
-                <button 
-                    onClick={handlePrevSlide} 
-                    className='absolute top-1/2 transform -translate-y-1/2 left-0 bg-black bg-opacity-50 text-white p-3 rounded-full focus:outline-none hover:bg-opacity-75'>
-                    <FaChevronLeft size={20} />
-                </button>
-                {/* Right Arrow */}
-                <button 
-                    onClick={handleNextSlide} 
-                    className='absolute top-1/2 transform -translate-y-1/2 right-0 bg-black bg-opacity-50 text-white p-3 rounded-full focus:outline-none hover:bg-opacity-75'>
-                    <FaChevronRight size={20} />
-                </button>
-            </div>
-
-            {/* Reach Us Section */}
-            <div className='w-full md:w-1/2 p-8 bg-gray-800 flex flex-col justify-center items-center text-center'>
-                <h2 className='text-3xl font-bold text-orange-600 mb-6'>Reach Us</h2>
-                <p className='text-sm leading-7 mb-6'>We are here to answer any questions you may have. Reach out to us and we'll respond as soon as we can.</p>
-                <form className='flex flex-col items-center gap-4'>
-                    <input 
-                        type='email' 
-                        placeholder='Enter your email' 
-                        className='w-full px-4 py-2 rounded-md text-black focus:outline-none focus:ring-2 focus:ring-orange-600' 
-                    />
-                    <button 
-                        type='submit' 
-                        className='bg-orange-600 text-white py-2 px-6 rounded-full hover:bg-orange-500 transition-all duration-300'>
-                        Submit
-                    </button>
+                    <div>
+                      <p className="text-black text-base lg:text-lg font-semibold mb-2 lg:mb-3">Last Name</p>
+                      <input className="w-full h-10 lg:h-12 px-3 lg:px-4 text-base lg:text-lg border-b-2 border-gray-300 focus:outline-none rounded-md" type="text" name="LastName" />
+                    </div>
+                    <div>
+                      <p className="text-black text-base lg:text-lg font-semibold mb-2 lg:mb-3">Email</p>
+                      <input className="w-full h-10 lg:h-12 px-3 lg:px-4 text-base lg:text-lg border-b-2 border-gray-300 focus:outline-none rounded-md" type="email" name="Email" />
+                    </div>
+                    <div>
+                      <p className="text-black text-base lg:text-lg font-semibold mb-2 lg:mb-3">Phone No.</p>
+                      <input className="w-full h-10 lg:h-12 px-3 lg:px-4 text-base lg:text-lg border-b-2 border-gray-300 focus:outline-none rounded-md" type="tel" name="PhoneNumber" />
+                    </div>
+                    <div className="md:col-span-2">
+                      <p className="text-black text-base lg:text-lg font-semibold mb-2 lg:mb-3">Message</p>
+                      <textarea className="w-full h-24 lg:h-32 px-3 lg:px-4 text-base lg:text-lg border-2 border-gray-200 rounded-lg bg-gray-100 focus:outline-none" placeholder="Write your message..."></textarea>
+                    </div>
+                  </div>
+                  <button className="mt-6 lg:mt-8 bg-orange-600 text-white font-semibold py-2 lg:py-3 px-4 lg:px-6 rounded-full w-full md:w-auto">
+                    Send Message
+                  </button>
                 </form>
+              </div>
             </div>
+          </div>
+    
+          {/* Right Side Div for Slides */}
+          <div className="lg:w-1/2 w-full h-auto lg:h-full relative overflow-hidden">
+            <p className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-white p-4 md:p-8 text-center">Testimonials</p>
+            <Slide
+              className="w-full h-full flex items-center justify-center"
+              autoplay
+              speed={6000}
+              infinite
+              prevArrow={<img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/t33.png" className="w-8 h-8 md:w-9 md:h-9 absolute left-4 top-1/2 transform -translate-y-1/2 cursor-pointer" alt="Prev" />}
+              nextArrow={<img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/t32.png" className="w-8 h-8 md:w-9 md:h-9 absolute right-4 top-1/2 transform -translate-y-1/2 cursor-pointer" alt="Next" />}
+              dots={false}
+            >
+              {testimonials.map((item, index) => (
+                <div key={index} className="flex flex-wrap justify-center w-full p-2 md:p-4">
+                  {/* Each Slide Wrapper */}
+                  <div className="flex flex-col items-center text-center bg-white p-4 md:p-5 rounded-lg shadow-md mx-2 w-full max-w-md lg:max-w-lg">
+                    <div className="relative w-full flex items-center justify-center mb-4">
+                      <div className="absolute text-2xl md:text-3xl lg:text-4xl text-gray-900 left-4 md:left-5 top-2 md:top-3">“</div>
+                      <img src={item.profileImg} className="w-10 h-10 md:w-28 md:h-28 lg:w-32 lg:h-32 rounded-full mb-4" alt={`${item.name} profile`} />
+                    </div>
+                    <p className="text-sm md:text-base lg:text-lg text-gray-800 mb-4 md:mb-6 overflow-hidden">{item.description}</p>
+                    <img src={item.reviewImg} className=" w-56 h-10 md:w-24 md:h-24 lg:w-28 lg:h-28 mb-4" alt="Review" />
+                    <p className="text-base md:text-lg lg:text-xl font-extrabold text-gray-900 mb-1">{item.name}</p>
+                    <p className="text-sm md:text-base lg:text-lg text-gray-600">{item.post}</p>
+                  </div>
+                </div>
+              ))}
+            </Slide>
+          </div>
         </div>
-    )
+      );
 };

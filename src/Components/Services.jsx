@@ -1,6 +1,5 @@
 import React from 'react';
-
-import { BsFillBuildingsFill } from "react-icons/bs";
+// import { BsFillBuildingsFill } from "react-icons/bs";
 import { FaBuildingColumns } from "react-icons/fa6";
 import { IoNewspaper } from "react-icons/io5";
 import { MdOutlineConstruction } from "react-icons/md";
@@ -8,7 +7,7 @@ import { BsBuildingFillGear } from "react-icons/bs";
 import { FaHammer } from "react-icons/fa6";
 import { MdChair } from "react-icons/md";
 import { IoHome } from "react-icons/io5";
-import { GiPlantRoots } from "react-icons/gi";
+// import { GiPlantRoots } from "react-icons/gi";
 import { PiPlantFill } from "react-icons/pi";
 
 export const Services = () => {

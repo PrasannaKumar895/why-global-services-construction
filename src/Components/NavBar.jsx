@@ -51,7 +51,7 @@ const NavBar = () => {
                 </div>
 
                 {/* Navigation Links */}
-                <ul className={`md:flex md:items-center absolute md:static bg-white md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${open ? 'top-19 opacity-100' : 'top-[-460px]'} md:opacity-100 opacity-0`}>
+                <ul className={`md:flex md:items-center absolute md:static bg-white shadow-none md:z-auto z-[-1] right-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-linear ${open ? 'top-19  opacity-100 w-1/2 rounded-md shadow-xl ' : 'top-[-460px]'} md:opacity-100  opacity-0`} >
                     {links.map((link) => (
                         <li key={link.name} className='md:ml-8 text-sm text-gray-800 hover:text-orange-600 duration-500 md:my-0 my-7 relative group'>
                             <Link to={link.link}>

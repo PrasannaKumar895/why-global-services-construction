@@ -1,6 +1,5 @@
 import React from 'react';
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaTwitter, FaFacebookF, FaYoutube, FaInstagram, FaLinkedinIn, FaArrowDown } from 'react-icons/fa';
-import { SiArrowRight } from 'react-icons/si';
 
 const Footer = () => {
   return (
