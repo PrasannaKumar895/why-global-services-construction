@@ -47,7 +47,7 @@ export const Project = () => {
                     {/* Left Part - Images */}
                     <div className='flex-1 md:w-1/2 flex items-center justify-center'>
                         <div 
-                            className='relative w-full h-[300px] md:h-[500px] lg:h-[565px] bg-cover bg-center rounded-xl'
+                            className='relative w-full h-[300px]  md:h-[500px] lg:h-[565px] bg-cover bg-center rounded-xl'
                             style={{ 
                                 backgroundImage: `url(${hoverIndex !== null ? projects[hoverIndex].ImgHover : projects[0].Img})`
                             }}

@@ -1,33 +1,36 @@
 import React from 'react';
-import { Link, Route, Routes } from 'react-router-dom';
-import Architectural from '../Components/Architectural';
-import Pro_Management from '../Components/Pro_Management';
+import { Link, Outlet} from 'react-router-dom';
+
+
 
 const OurServices = () => {
   let serviceLinks = [
-    { name: "Architectural Design", link: "architecture" },
-    { name: "Project Management", link: "pro_management" },
-    { name: "Construction Planning", link: "construction_planning" },
-    { name: "Residential Construction", link: "residential_construction" },
-    { name: "Commercial Construction", link: "commercial_construction" },
-    { name: "Renovation and Remodeling", link: "renovation_remodeling" },
+    { name: "Architectural Design", link: "/services/architecture" },
+    { name: "Project Management", link: "/services/pro_management" },
+    { name: "Construction Planning", link: "/services/construction" },
+    { name: "Residential Construction", link: "/services/residential" },
+    { name: "Commercial Construction", link: "/services/commercial" },
+    { name: "Renovation and Remodeling", link: "/services/renovation" },
   ];
 
   return (
-    <div className="px-4 ">
-      <nav className="flex justify-evenly" >
+    <div className="px-4">
+      <nav className="flex justify-evenly flex-wrap lg:gap-6 gap-2 ">
         {serviceLinks.map((item, index) => (
-          <p key={index} className=' border-b-2 py-1 font-light border-black'>
+          <p
+            key={index}
+            className="border-b-2 rounded-b-md lg:py-1 py-1 font-light hover:border-black 
+                       text-sm sm:text-base md:text-lg lg:text-md"
+          >
             <Link to={item.link} className="text-orange-600 cursor-pointer">
               {item.name}
             </Link>
           </p>
         ))}
       </nav>
-      <Architectural />
-
-    
-
+     
+      
+     <Outlet />
     
     </div>
   );

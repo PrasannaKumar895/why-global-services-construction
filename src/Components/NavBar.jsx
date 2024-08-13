@@ -12,23 +12,21 @@ const NavBar = () => {
         { name: "HOME", link: "/" },
         {
             name: "SERVICES", link: "/services", subLinks: [
-                { name: "ARCHITECTURAL DESIGN", link: "/" },
-                { name: "PROJECT MANAGEMENT", link: "/" },
-                { name: "CONSTRUCTION PLANNING", link: "/" },
-                { name: "RESIDENTIAL CONSTRUCTION", link: "/" },
-                { name: "COMMERCIAL CONSTRUCTION", link: "/" },
-                { name: "RENOVATION", link: "/" },
-                { name: "INTERIOR DESIGN", link: "/" },
-                { name: "SUSTAINABLE BUILDING", link: "/" }
+                { name: "ARCHITECTURAL DESIGN", link: "/architecture" },
+                { name: "PROJECT MANAGEMENT", link: "/pro-management" },
+                { name: "CONSTRUCTION PLANNING", link: "/construction" },
+                { name: "RESIDENTIAL CONSTRUCTION", link: "/residential" },
+                { name: "COMMERCIAL CONSTRUCTION", link: "/commercial" },
+                { name: "RENOVATION", link: "/renovation" },
             ]
         },
         {
             name: "PROJECTS", link: "/projects", subLinks: [
-                { name: "MODERN HIGH-RISE BUILDING", link: "/" },
+                { name: "MODERN HIGH-RISE BUILDING", link: "/high_rise" },
                 { name: "LUXURY RESIDENTIAL COMPLEX", link: "/" },
                 { name: "COMMERCIAL OFFICE SPACE", link: "/" },
-                { name: "URBAN RETAIL STORE", link: "/" },
-                { name: "ECO-FRIENDLY COMMUNITY CENTER", link: "/" }
+                // { name: "URBAN RETAIL STORE", link: "/" },
+                // { name: "ECO-FRIENDLY COMMUNITY CENTER", link: "/" }
             ]
         },
         { name: "ABOUT", link: "/about-us" },
@@ -72,6 +70,7 @@ const NavBar = () => {
                         </li>
                     ))}
                     {/* Join Button */}
+
                     <button className='bg-orange-600 text-white py-2 text-sm px-6 rounded md:ml-8 hover:bg-orange-300 duration-500 mb-5 md:mb-0'>
                         Join
                     </button>

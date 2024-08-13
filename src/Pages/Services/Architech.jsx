@@ -1,181 +1,182 @@
-//import img_1 from '../assets/banner_cons.jpg'
-import img_1 from '../../images/IMG7.jpg'
-import img_2 from  '../../images/IMG8.jpg'
-// import img_2 from '../assets/img_2.jpg'
-// import img_3 from '../assets/img_3.jpg'
-
-// import img_4 from '../assets/img_4.jpg'
-
-// import img_5 from '../assets/img_5.jpg'
-
-import { TiTick } from "react-icons/ti";
 import React, { useState, useEffect } from 'react';
+import banner_img from '../../images/ArchImgbanner.jpg';
+import img_1 from '../../images/ArchImg1.jpg';
+import img_2 from '../../images/ArchImg2.jpg';
+import img_3 from '../../images/ArchImg3.jpg';
+import img_4 from '../../images/ArchImg4.jpg';
+import img_5 from '../../images/ArchImg5.jpg';
+import { TiTick } from "react-icons/ti";
+
 
 const Architectural = () => {
-    const images = [
-        img_1,
-        img_2,
-        img_1,
-        img_2,
-        img_1
-    ];
-
+    const images = [img_1, img_2, img_3, img_4, img_5];
     const [currentIndex, setCurrentIndex] = useState(0);
-
+  
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentIndex((prevIndex) =>
                 prevIndex === images.length - 1 ? 0 : prevIndex + 1
             );
-        }, 3000); // Change image every 3 seconds
-
+        }, 3000);
+  
         return () => clearInterval(interval);
     }, [images.length]);
 
-  return (
-    <div className='mb-5'>
-       <h1 
-    className='bg-cover bg-center text-white pl-8 py-8 font-semibold text-2xl relative overflow-hidden'
-    style={{ backgroundImage: `url(${img_1}) `}}
->
-    <div className="absolute inset-0 bg-black/30 backdrop-blur-sm"></div> 
-    <span className="relative text-orange-600 font-extrabold font-2xl z-10">Architecture Design</span>
-</h1>
-
-
-        <div className='flex justify-between gap-2'>
-            <div className='w-[30%] bg-gray-800 text-white mt-2 px-4 py-2 text-justify rounded-r-xl'>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, aut. Libero, culpa vitae? Ullam, quod hic neque similique perferendis atque et aliquam sit, harum enim sed consequuntur. Delectus, sint illum!</p>
-            </div>
-            <div className='w-[65%] mt-2 flex flex-col gap-20'>
-    <div className='flex w-full justify-between px-3 py-3'>
-        <img 
-            src={img_1} 
-            alt="" 
-            className='w-[20%] transition-transform duration-300 ease-in-out hover:-translate-y-2 shadow-lg rounded-md'
-        />
-        <img 
-            src={img_1} 
-            alt="" 
-            className='w-[20%] transition-transform duration-300 ease-in-out hover:-translate-y-2 shadow-lg rounded-md'
-        />
-        <img 
-            src={img_1} 
-            alt="" 
-            className='w-[20%] transition-transform duration-300 ease-in-out hover:-translate-y-2 shadow-lg rounded-md'
-        />
-        <img 
-            src={img_1} 
-            alt="" 
-            className='w-[20%] transition-transform duration-300 ease-in-out hover:-translate-y-2 shadow-lg rounded-md'
-        />
-    </div>
-</div>
-
-        </div>
-        <div className='flex w-full gap-5 '>
-        <div className=' w-[70%] grid gap-2 grid-cols-2 my-4'>
-            <div className='p-4 '>
-                <h1 className='text-lg  font-normal'>First Heading</h1>
-                <p className=' font-extralight text-justify'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate, consequuntur temporibus? Voluptatem laudantium reiciendis rerum! Deleniti hic labore optio dolorem at, reprehenderit, expedita, neque harum excepturi voluptatibus delectus quasi quo.</p>
-            </div>
-            <div className='p-4 bg-orange-200 '>
-                <h1 className='text-lg  font-normal'>First Heading</h1>
-                <p className=' font-extralight text-justify'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate, consequuntur temporibus? Voluptatem laudantium reiciendis rerum! Deleniti hic labore optio dolorem at, reprehenderit, expedita, neque harum excepturi voluptatibus delectus quasi quo.</p>
-            </div>
-            <div className='p-4 bg-orange-200 '>
-                <h1 className='text-lg  font-normal'>First Heading</h1>
-                <p className=' font-extralight text-justify'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate, consequuntur temporibus? Voluptatem laudantium reiciendis rerum! Deleniti hic labore optio dolorem at, reprehenderit, expedita, neque harum excepturi voluptatibus delectus quasi quo.</p>
-            </div>
-            <div className='p-4 '>
-                <h1 className='text-lg  font-normal'>First Heading</h1>
-                <p className=' font-extralight text-justify'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate, consequuntur temporibus? Voluptatem laudantium reiciendis rerum! Deleniti hic labore optio dolorem at, reprehenderit, expedita, neque harum excepturi voluptatibus delectus quasi quo.</p>
-            </div>
-           
-        </div>
-        <div className='w-[30%] bg-gray-400 rounded-md flex flex-col items-center justify-center gap-10 px-10 py-8 my-4'>
-            <h1 className='font-light mt-6'>
-                Do you have any questions?
-            </h1>
-            <p className='text-sm'>Contact us at the TheBuilt WP office nearest to you or submit a business inquiry online</p>
-            <button className="border-solid border-2 border-white px-4 py-2" >Contact Us</button>
-         
-        </div>
-        {/* <div 
-            className='w-[30%] bg-gray-400 rounded-md flex flex-col items-center justify-center gap-10 px-10 py-8 my-4 transition-all duration-500'
-            style={{ 
-                backgroundImage: url(${img_1}),
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat'
-            }}
+    return (
+        
+        <div className='my-4 px-4'>
+            {/* Banner Section */}
+            <h1
+                className='bg-cover bg-center text-white pl-8 py-8 font-semibold text-xl sm:text-2xl md:text-3xl lg:text-4xl relative overflow-hidden'
+                style={{ backgroundImage: `url(${banner_img})`}}
             >
-            <h1 className='font-light mt-6'>
-                Do you have any questions?
+                <div className="absolute inset-0 bg-black/30 backdrop-blur-sm"></div>
+                <span className="relative text-orange-600 font-extrabold z-10">
+                Architectural Design
+                </span>
             </h1>
-            <p className='text-sm'>Contact us at the TheBuilt WP office nearest to you or submit a business inquiry online</p>
-            <button className="border-solid border-2 border-white px-4 py-2">Contact Us</button>
-        </div> */}
-        {/* <div className='w-[30%] bg-gray-400 rounded-md flex flex-col items-center justify-center gap-10 px-10 py-8 my-4'>
-            <h1 className='font-light mt-6'>
-                Do you have any questions?
-            </h1>
-            <p className='text-sm'>Contact us at the TheBuilt WP office nearest to you or submit a business inquiry online</p>
-            <div className='w-full flex justify-center'>
-                <img 
-                    src={img_1} 
-                    alt="Contact Us" 
-                    className='w-full transition-all duration-500 hover:filter hover:blur-md'
-                />
-            </div>
-            <button className="border-solid border-2 border-white px-4 py-2">Contact Us</button>
-        </div> */}
-
-        </div>
-        <div className='flex gap-10 p-2 '>
-            <div className='w-1/2'>
-                <h2 className='bg-orange-600 font-bold text-white px-4 w-[70%] py-2'>Additon Construction Step</h2>
-
-                <p className='text-md text-justify font-medium  mt-3'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt dignissimos, ipsum soluta earum in ratione esse facilis. Soluta eveniet ex dolorum, quaerat repudiandae perferendis corporis laborum reprehenderit optio maiores? Consectetur.</p>
-                <ul className='flex flex-col justify-start' >
-                    <li className='flex items-center gap-3 ml-4' ><TiTick className='text-orange-600' />Cost Reporting</li>
-                    <li className='flex items-center gap-3 ml-4' ><TiTick className='text-orange-600' />Cost Reporting</li>
-                    <li className='flex items-center gap-3 ml-4' ><TiTick className='text-orange-600' />Cost Reporting</li>
-                    
-                </ul>
-                <p className='mt-4'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque earum sunt harum consequuntur, nesciunt architecto.</p>
-            </div>
-            <div className='w-1/2  bg-gray-800 rounded-md'>
-            <h2 className='text-xl px-10 pt-6 font-medium text-orange-600'>Service Provided</h2>
-            {/* <div className='flex bg-gray-800'>
-            <div className='w-[50%] h-[50%]'>
-                <img src={img_1} alt="" /></div>
-                <div className='w-1/2 p-5 flex flex-col gap-1 text-orange-600'> 
-                <p className='border-solid border-2 px-4 py-2 border-white-500 hover:bg-orange-600 hover:text-white rounded-sm' >One</p>
-                <p className='border-solid border-2 px-4 py-2 border-white-500 hover:bg-orange-600 hover:text-white rounded-sm' >One</p>
-                <p className='border-solid border-2 px-4 py-2 border-white-500 hover:bg-orange-600 hover:text-white rounded-sm' >One</p>
-                <p className='border-solid border-2 px-4 py-2 border-white-500 hover:bg-orange-600 hover:text-white rounded-sm' >One</p>
-                
-                </div>
-            </div> */}
-            <div className='flex'>
-            <div className='w-1/2 h-[30%] rounded-md'>
-                <img src={images[currentIndex]} alt="Slideshow" className='w-[80%] py-8 px-5 h-[80%] object-cover' />
-            </div>
-            <div className='w-1/2 p-5 flex flex-col gap-4 text-orange-600'>
-                <p className='border-solid border-2 mt-4 px-4 py-2 border-white-500 hover:bg-orange-600 hover:text-white rounded-sm'>One</p>
-                <p className='border-solid border-2 px-4 py-2 border-white-500 hover:bg-orange-600 hover:text-white rounded-sm'>Two</p>
-                <p className='border-solid border-2 px-4 py-2 border-white-500 hover:bg-orange-600 hover:text-white rounded-sm'>Three</p>
-                <p className='border-solid border-2 px-4 py-2 border-white-500 hover:bg-orange-600 hover:text-white rounded-sm'>Four</p>
-            </div>
-        </div>
-           
-            </div>
-         
             
+    
+            {/* Main Content */}
+            <div className='flex flex-col md:flex-row justify-between gap-2 mt-4'>
+                {/* Left Column */}
+                <div className='md:w-[30%] bg-gray-800 text-white p-4 text-justify rounded-r-xl'>
+                    <p>Our goal is to transform spaces into functional, aesthetically pleasing environments that enhance the quality of life for their users. From conceptual design to final execution, we are dedicated to creating spaces that inspire and endure.</p>
+                </div>
+
+                {/* Right Column - Image Grid */}
+                <div className='md:w-[65%] flex flex-col gap-10 mt-4 md:mt-0'>
+                    <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4'>
+                        <img 
+                            src={img_1} 
+                            alt="Project Image 1" 
+                            className='w-full h-60 object-cover transition-transform duration-300 ease-in-out hover:-translate-y-2 shadow-lg rounded-md'
+                        />
+                        <img 
+                            src={img_2} 
+                            alt="Project Image 2" 
+                            className='w-full h-60 object-cover transition-transform duration-300 ease-in-out hover:-translate-y-2 shadow-lg rounded-md'
+                        />
+                        <img 
+                            src={img_3} 
+                            alt="Project Image 3" 
+                            className='w-full h-60 object-cover transition-transform duration-300 ease-in-out hover:-translate-y-2 shadow-lg rounded-md'
+                        />
+                        <img 
+                            src={img_4} 
+                            alt="Project Image 4" 
+                            className='w-full h-60 object-cover transition-transform duration-300 ease-in-out hover:-translate-y-2 shadow-lg rounded-md'
+                        />
+                       
+                    </div>
+                </div>
+            </div>
+    
+            {/* Additional Sections */}
+            <div className='flex flex-col md:flex-row gap-5 mt-8'>
+                <div className='md:w-[70%] grid gap-4 grid-cols-1 sm:grid-cols-2'>
+                    <div className='p-4'>
+                        <h1 className='text-lg font-normal'>Innovative Conceptualization</h1>
+                        <p className='font-extralight text-justify'>Our team excels in conceptualizing architectural designs that align with your vision and functional requirements. By integrating the latest trends with practical solutions, we ensure that every project is both innovative and achievable. From initial sketches to detailed plans, we deliver designs that are both visually stunning and pragmatically sound.</p>
+                    </div>
+                    <div className='p-4 bg-orange-200'>
+                        <h1 className='text-lg font-normal'>Sustainable Architecture</h1>
+                        <p className='font-extralight text-justify'>We are committed to creating sustainable architectural solutions that minimize environmental impact while enhancing efficiency. Our designs incorporate eco-friendly materials, energy-efficient systems, and sustainable practices to ensure that your building is not only beautiful but also kind to the planet.
+                    </p>
+                    </div>
+                    <div className='p-4 bg-orange-200'>
+                        <h1 className='text-lg font-normal'>Precision Engineering</h1>
+                        <p className='font-extralight text-justify'>Attention to detail is at the heart of our architectural process. Our expert engineers and architects work together to ensure every element of your design is meticulously crafted. We combine advanced technology with skilled craftsmanship to deliver structures that meet the highest standards of quality and precision.</p>
+                    </div>
+                    <div className='p-4'>
+                        <h1 className='text-lg font-normal'>Client-Centric Approach</h1>
+                        <p className='font-extralight text-justify'>We believe that every project is unique, and so is our approach. We work closely with you to understand your specific needs, preferences, and goals. Our client-centric approach ensures that the final design reflects your vision, enhances functionality, and exceeds expectations.</p>
+                    </div>
+                </div>
+    
+                {/* Contact Section */}
+                <div className="group md:w-[30%] bg-gray-400 rounded-md flex flex-col items-center justify-center gap-10 px-6 py-8 relative overflow-hidden">
+                    <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-0 group-hover:opacity-100 group-hover:blur-sm transition-all duration-300" style={{ backgroundImage: `url(${banner_img})` }}></div>
+                    <h1 className="font-medium text-lg mt-6 text-white text-center z-10">
+                        Do you have any questions?
+                    </h1>
+                    <p className="text-sm text-center text-white z-10">Contact us at the TheBuilt WP office nearest to you or submit a business inquiry online</p>
+                    <button className="border-solid border-2 hover:text-white hover:bg-orange-600 text-orange-600 border-white px-4 py-2 z-10">Contact Us</button>
+                </div>
+            </div>
+    
+            {/* Service Provided Section */}
+            <div className='flex flex-col md:flex-row gap-5 mt-8'>
+                <div className='md:w-1/2'>
+                    <h2 className='bg-orange-600 font-bold text-white px-4 py-2'>Addition Construction Step</h2>
+                    <p className='text-md text-justify font-medium mt-3'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt dignissimos, ipsum soluta earum in ratione esse facilis. Soluta eveniet ex dolorum, quaerat repudiandae perferendis corporis laborum reprehenderit optio maiores? Consectetur.</p>
+                    <ul className='flex flex-col justify-start mt-4'>
+                        <li className='flex items-center gap-3 ml-4'><TiTick className='text-orange-600' /> Cost Reporting</li>
+                        <li className='flex items-center gap-3 ml-4'><TiTick className='text-orange-600' /> Project Management</li>
+                        <li className='flex items-center gap-3 ml-4'><TiTick className='text-orange-600' /> Quality Assurance</li>
+                    </ul>
+                    <p className='mt-4'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque earum sunt harum consequuntur, nesciunt architecto.</p>
+                </div>
+                <div className='md:w-1/2 bg-gray-800 rounded-md'>
+                    <h2 className='text-xl px-10 pt-6 font-medium text-orange-600'>Service Provided</h2>
+                    <div className='flex flex-col sm:flex-row'>
+                        <div className='w-full sm:w-1/2 h-60 rounded-md flex justify-center items-center'>
+                            <img src={images[currentIndex]} alt="Slideshow" className='w-full h-full object-cover py-4 sm:py-8' />
+                        </div>
+                        <div className='w-full sm:w-1/2 p-5 flex flex-col gap-4 text-orange-600'>
+                            <p className='border-solid border-2 mt-4 px-4 py-2 border-white-500 hover:bg-orange-600 hover:text-white rounded-sm'>One</p>
+                            <p className='border-solid border-2 px-4 py-2 border-white-500 hover:bg-orange-600 hover:text-white rounded-sm'>Two</p>
+                            <p className='border-solid border-2 px-4 py-2 border-white-500 hover:bg-orange-600 hover:text-white rounded-sm'>Three</p>
+                            <p className='border-solid border-2 px-4 py-2 border-white-500 hover:bg-orange-600 hover:text-white rounded-sm'>Four</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* Additional Content Section */}
+            <section className="py-16 flex justify-center items-center" id="section_2">
+                <div className="container mx-auto px-4">
+                    <div className="flex flex-wrap gap-10 items-center">
+                        <div className="flex justify-center w-full md:w-[40%] gap-10 items-center">
+                            <div className="w-1/3 md:w-3/12">
+                                <img
+                                    src={banner_img}
+                                    className="rounded-full shadow-2xl w-full h-auto"
+                                    alt="Additional Content 1"
+                                />
+                            </div>
+                            <div className="w-1/3 md:w-4/12">
+                                <img
+                                    src={banner_img}
+                                    className="rounded-full shadow-2xl w-full h-auto"
+                                    alt="Additional Content 2"
+                                />
+                            </div>
+                            <div className="w-1/3 md:w-3/12">
+                                <img
+                                    src={banner_img}
+                                    className="rounded-full shadow-2xl w-full h-auto"
+                                    alt="Additional Content 3"
+                                />
+                            </div>
+                        </div>
+                        <div className="w-full md:w-1/2 lg:w-5/12 ml-3 mb-8 lg:mb-0">
+                            <small className="text-gray-500 uppercase tracking-wider">Content</small>
+                            <h2 className="mt-2 mb-4 text-3xl text-orange-600 font-bold">
+                                <span className="text-gray-500">Introducing</span> Moso
+                            </h2>
+                            <h4 className="text-gray-500 mb-3">
+                                Since 1986, We crafted interior products for better spaces
+                            </h4>
+                            <p className="text-justify">
+                                Moso Interior is a free Bootstrap 5 HTML CSS template for your website. Tooplate is one of the best websites to download 100% free HTML Templates for web designers and developers around the world. Thank you for visiting.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
-       </div>
-  )
+    );
 }
 
-export default Architectural
+export default Architectural;
