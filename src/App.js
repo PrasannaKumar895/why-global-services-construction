@@ -23,6 +23,7 @@ import High from './Pages/Projects/RiseBuilding';
 import Blog from './Pages/Blogs';
 import LuxuryBuilding from './Pages/Projects/LuxuryBuilding';
 import CommercialBuilding from './Pages/Projects/CommercialBuilding';
+import PostDetail from './Components/PostDetail';
 
 
 function App() {
@@ -44,12 +45,15 @@ function App() {
           <Route path='high_rise' element={<High/>}/>
           <Route path='luxury' element={<LuxuryBuilding/>}/>
           <Route path='commercial' element={<CommercialBuilding/>}/>
-
-          
         </Route>
-        
+  
         <Route path='/about-us' element={<AboutUs/>}/>
-        <Route path='/blog' element={<Blog/>}/>
+        <Route path='/blog' element={<Blog/>}>
+        <Route path='construction-engineering' element={<PostDetail/>}/>
+        <Route path='mechanical-engineering' element={<PostDetail/>}/>
+        <Route path='industrial-chemicals' element={<PostDetail/>}/>
+        </Route>
+
         <Route path='/contact' element={<Contact/>}/>
       </Routes>
     </div>

@@ -38,10 +38,7 @@ const Residential = () => {
     
             {/* Main Content */}
             <div className='flex flex-col md:flex-row justify-between gap-2 mt-4'>
-                {/* Left Column */}
-                <div className='md:w-[30%] bg-gray-800 text-white p-4 text-justify rounded-r-xl'>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, aut. Libero, culpa vitae? Ullam, quod hic neque similique perferendis atque et aliquam sit, harum enim sed consequuntur. Delectus, sint illum!</p>
-                </div>
+               
 
                 {/* Right Column - Image Grid */}
                 <div className='md:w-[65%] flex flex-col gap-10 mt-4 md:mt-0'>
@@ -69,31 +66,16 @@ const Residential = () => {
                        
                     </div>
                 </div>
+                 {/* Left Column */}
+                 <div className='md:w-[30%] bg-gray-800 text-white p-4 text-justify rounded-r-xl'>
+                    <p>Residential construction involves creating comfortable, functional, and aesthetically pleasing homes tailored to your lifestyle and preferences. Our dedicated team ensures that every residential project, from single-family homes to multi-unit developments, is managed with precision and care. We handle all aspects of the construction process, delivering high-quality results that meet your expectations.</p>
+                </div>
             </div>
     
             {/* Additional Sections */}
             <div className='flex flex-col md:flex-row gap-5 mt-8'>
-                <div className='md:w-[70%] grid gap-4 grid-cols-1 sm:grid-cols-2'>
-                    <div className='p-4'>
-                        <h1 className='text-lg font-normal'>First Heading</h1>
-                        <p className='font-extralight text-justify'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate, consequuntur temporibus? Voluptatem laudantium reiciendis rerum! Deleniti hic labore optio dolorem at, reprehenderit, expedita, neque harum excepturi voluptatibus delectus quasi quo.</p>
-                    </div>
-                    <div className='p-4 bg-orange-200'>
-                        <h1 className='text-lg font-normal'>Second Heading</h1>
-                        <p className='font-extralight text-justify'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate, consequuntur temporibus? Voluptatem laudantium reiciendis rerum! Deleniti hic labore optio dolorem at, reprehenderit, expedita, neque harum excepturi voluptatibus delectus quasi quo.</p>
-                    </div>
-                    <div className='p-4 bg-orange-200'>
-                        <h1 className='text-lg font-normal'>Third Heading</h1>
-                        <p className='font-extralight text-justify'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate, consequuntur temporibus? Voluptatem laudantium reiciendis rerum! Deleniti hic labore optio dolorem at, reprehenderit, expedita, neque harum excepturi voluptatibus delectus quasi quo.</p>
-                    </div>
-                    <div className='p-4'>
-                        <h1 className='text-lg font-normal'>Fourth Heading</h1>
-                        <p className='font-extralight text-justify'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate, consequuntur temporibus? Voluptatem laudantium reiciendis rerum! Deleniti hic labore optio dolorem at, reprehenderit, expedita, neque harum excepturi voluptatibus delectus quasi quo.</p>
-                    </div>
-                </div>
-    
-                {/* Contact Section */}
-                <div className="group md:w-[30%] bg-gray-400 rounded-md flex flex-col items-center justify-center gap-10 px-6 py-8 relative overflow-hidden">
+                 {/* Contact Section */}
+                 <div className="group md:w-[30%] bg-gray-400 rounded-md flex flex-col items-center justify-center gap-10 px-6 py-8 relative overflow-hidden">
                     <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-0 group-hover:opacity-100 group-hover:blur-sm transition-all duration-300" style={{ backgroundImage: `url(${banner_img})` }}></div>
                     <h1 className="font-medium text-lg mt-6 text-white text-center z-10">
                         Do you have any questions?
@@ -101,6 +83,26 @@ const Residential = () => {
                     <p className="text-sm text-center text-white z-10">Contact us at the TheBuilt WP office nearest to you or submit a business inquiry online</p>
                     <button className="border-solid border-2 hover:text-white hover:bg-orange-600 text-orange-600 border-white px-4 py-2 z-10">Contact Us</button>
                 </div>
+                <div className='md:w-[70%] grid gap-4 grid-cols-1 sm:grid-cols-2'>
+                    <div className='p-4'>
+                        <h1 className='text-lg font-normal'>Custom Home Design and Planning</h1>
+                        <p className='font-extralight text-justify'>We begin with a comprehensive consultation to understand your vision and needs. Our design team collaborates with you to create custom home plans that reflect your style and functional requirements.</p>
+                    </div>
+                    <div className='p-4 bg-orange-200'>
+                        <h1 className='text-lg font-normal'>Material Selection and Sourcing</h1>
+                        <p className='font-extralight text-justify'>We assist you in selecting high-quality materials that match your aesthetic preferences and budget. This includes Flooring, cabinetry, and countertops, Exterior finishes and roofing materials, Energy-efficient options and sustainable materials</p>
+                    </div>
+                    <div className='p-4 bg-orange-200'>
+                        <h1 className='text-lg font-normal'>Quality Assurance and Inspections</h1>
+                        <p className='font-extralight text-justify'>Quality is our top priority. We conduct thorough inspections at each stage of construction to ensure that all work meets our high standards and complies with building codes. We maintain open lines of communication throughout the construction process, providing regular updates</p>
+                    </div>
+                    <div className='p-4'>
+                        <h1 className='text-lg font-normal'>Final Walkthrough and Handover</h1>
+                        <p className='font-extralight text-justify'>Upon completion, we conduct a final walkthrough with you to ensure that everything meets your satisfaction. We provide all necessary documentation and guides for the care and maintenance of your new home.</p>
+                    </div>
+                </div>
+    
+               
             </div>
     
             {/* Service Provided Section */}

@@ -1,13 +1,16 @@
 import React from 'react';
-import IMG1 from '../images/IMG8.jpg';
+import IMG1 from '../images/IMG1.jpg';
 
 export const AboutUs = () => {
   return (
     <div className='pb-20'>
-      {/* About Section */}
-      <div className="bg-gray-800 text-white text-center p-8 md:p-12">
-        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl">About Us Page</h1>
-      </div>
+              <div className="bg-gray-800 text-white text-center ">
+          <img
+            src={IMG1}
+            alt="About Us"
+            className="w-full h-[200px] object-cover rounded-lg"
+          />
+        </div>
 
       {/* Our Services */}
       <div className="flex flex-col lg:flex-row w-full h-auto lg:h-screen p-4 lg:p-8 xl:p-20">
@@ -52,24 +55,25 @@ export const AboutUs = () => {
         </div>
       </div>
 
-      {/* Our Clients */}
-      <h2 className="text-center text-2xl sm:text-3xl font-bold my-8">Our Clients</h2>
-      <div className='w-full h-auto bg-orange-500'>
-        <div className='flex flex-wrap w-full'>
-          {[1, 2, 3, 4, 5, 6].map((item, index) => (
-            <div
-              key={index}
-              className='flex-1 min-w-[150px] mx-1 my-1'
-            >
-              <img
-                src={IMG1} 
-                alt={`Client ${item}`}
-                className='w-full h-full object-cover rounded-lg'
-              />
-            </div>
-          ))}
+            {/* Our Clients */}
+        <h2 className="text-center text-2xl sm:text-3xl font-bold my-8">Our Clients</h2>
+        <div className="w-full h-auto">
+          <div className="flex flex-wrap w-full">
+            {[1, 2, 3, 4, 5, 6].map((item, index) => (
+              <div
+                key={index}
+                className="flex-1 min-w-[150px] mx-1 my-1"
+              >
+                <img
+                  src={IMG1}
+                  alt={`Client ${item}`}
+                  className="w-full h-full object-cover rounded-lg transition-transform duration-300 transform hover:scale-105"
+                />
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
+
 
       {/* Our Team */}
       <h2 className="text-center text-2xl sm:text-3xl font-bold my-8">Our Team</h2>
@@ -83,7 +87,7 @@ export const AboutUs = () => {
                 <p className="text-gray-600">Role Description</p>
                 <p>Some text that describes me lorem ipsum ipsum lorem.</p>
                 <p>{name.toLowerCase().replace(' ', '@example.com')}</p>
-                <button className="w-full py-2 text-white bg-orange-600 hover:bg-orange-400">
+                <button className="w-full py-2 text-white bg-orange-600 hover:bg-orange-400 mt-5 rounded-lg">
                   Contact
                 </button>
               </div>

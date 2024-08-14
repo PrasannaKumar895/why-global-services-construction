@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import banner_img from '../../images/ArchImgbanner.jpg';
-import img_1 from '../../images/ArchImg1.jpg';
-import img_2 from '../../images/ArchImg2.jpg';
-import img_3 from '../../images/ArchImg3.jpg';
-import img_4 from '../../images/ArchImg4.jpg';
+import img_1 from '../../images/ProjectManagmenet-1.jpg';
+import img_2 from '../../images/ProjectManagement-2.jpg';
+import img_3 from '../../images/ProjectManagement-3.jpg';
+import img_4 from '../../images/ProjectManagement-4.jpg';
 import img_5 from '../../images/ArchImg5.jpg';
 import { TiTick } from "react-icons/ti";
 
@@ -67,7 +67,7 @@ const ProManagement = () => {
                 </div>
                  {/* Left Column */}
                  <div className='md:w-[30%] bg-gray-800 text-white p-4 text-justify rounded-r-xl'>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, aut. Libero, culpa vitae? Ullam, quod hic neque similique perferendis atque et aliquam sit, harum enim sed consequuntur. Delectus, sint illum!</p>
+                    <p>Effective planning and scheduling are critical to the success of any construction project. Our comprehensive approach ensures that every aspect of your project is meticulously planned, from initial concept through to completion. We utilize industry-leading techniques and tools to create a clear, actionable roadmap that aligns with your goals and timelines.</p>
                 </div>
 
             </div>
@@ -76,20 +76,20 @@ const ProManagement = () => {
             <div className='flex flex-col md:flex-row gap-5 mt-8'>
                 <div className='md:w-[70%] grid gap-4 grid-cols-1 sm:grid-cols-2'>
                     <div className='p-4'>
-                        <h1 className='text-lg font-normal'>First Heading</h1>
-                        <p className='font-extralight text-justify'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate, consequuntur temporibus? Voluptatem laudantium reiciendis rerum! Deleniti hic labore optio dolorem at, reprehenderit, expedita, neque harum excepturi voluptatibus delectus quasi quo.</p>
+                        <h1 className='text-lg font-normal'>Project Scope Definition</h1>
+                        <p className='font-extralight text-justify'>Our team works with you to define the scope of the project in detail. This includes identifying key deliverables, setting project boundaries, and outlining specific tasks and responsibilities. If adjustments are needed, we promptly make changes to stay aligned with project goals.</p>
                     </div>
                     <div className='p-4 bg-orange-200'>
-                        <h1 className='text-lg font-normal'>Second Heading</h1>
-                        <p className='font-extralight text-justify'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate, consequuntur temporibus? Voluptatem laudantium reiciendis rerum! Deleniti hic labore optio dolorem at, reprehenderit, expedita, neque harum excepturi voluptatibus delectus quasi quo.</p>
+                        <h1 className='text-lg font-normal'>Initial Consultation and Requirement Analysis</h1>
+                        <p className='font-extralight text-justify'>We begin by engaging with you to understand your vision, requirements, and project objectives. This initial consultation helps us gather all necessary information to create a tailored plan that meets your expectations.</p>
                     </div>
                     <div className='p-4 bg-orange-200'>
-                        <h1 className='text-lg font-normal'>Third Heading</h1>
-                        <p className='font-extralight text-justify'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate, consequuntur temporibus? Voluptatem laudantium reiciendis rerum! Deleniti hic labore optio dolorem at, reprehenderit, expedita, neque harum excepturi voluptatibus delectus quasi quo.</p>
+                        <h1 className='text-lg font-normal'>Detailed Planning</h1>
+                        <p className='font-extralight text-justify'>Using advanced planning tools, we develop a comprehensive project plan that includes all phases of construction. By prioritizing meticulous planning and scheduling, we ensure that your construction project progresses smoothly and meets your expectations for quality, timeliness, and budget. </p>
                     </div>
                     <div className='p-4'>
-                        <h1 className='text-lg font-normal'>Fourth Heading</h1>
-                        <p className='font-extralight text-justify'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate, consequuntur temporibus? Voluptatem laudantium reiciendis rerum! Deleniti hic labore optio dolorem at, reprehenderit, expedita, neque harum excepturi voluptatibus delectus quasi quo.</p>
+                        <h1 className='text-lg font-normal'>Risk Management and Contingency Planning</h1>
+                        <p className='font-extralight text-justify'>We identify potential risks and develop contingency plans to address any issues that may arise. This proactive approach helps us minimize disruptions and keep the project on track. Throughout the project, we continuously monitor progress against the plan and schedule. Regular updates and progress reports keep you informed.</p>
                     </div>
                 </div>
     

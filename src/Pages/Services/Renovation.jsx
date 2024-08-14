@@ -38,10 +38,7 @@ const Renovation = () => {
     
             {/* Main Content */}
             <div className='flex flex-col md:flex-row justify-between gap-2 mt-4'>
-                {/* Left Column */}
-                <div className='md:w-[30%] bg-gray-800 text-white p-4 text-justify rounded-r-xl'>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, aut. Libero, culpa vitae? Ullam, quod hic neque similique perferendis atque et aliquam sit, harum enim sed consequuntur. Delectus, sint illum!</p>
-                </div>
+            
 
                 {/* Right Column - Image Grid */}
                 <div className='md:w-[65%] flex flex-col gap-10 mt-4 md:mt-0'>
@@ -69,26 +66,33 @@ const Renovation = () => {
                        
                     </div>
                 </div>
+                  {/* Left Column */}
+                  <div className='md:w-[30%] bg-gray-800 text-white p-4 text-justify rounded-r-xl'>
+                    <p>Renovation is about transforming existing spaces to meet modern needs, improve functionality, and enhance aesthetic appeal. Whether you’re updating a residential property or revitalizing a commercial space, our renovation services are designed to breathe new life into your property while maintaining its unique character. We manage every aspect of the renovation process to ensure a seamless experience and exceptional results.</p>
+                </div>
             </div>
     
             {/* Additional Sections */}
             <div className='flex flex-col md:flex-row gap-5 mt-8'>
                 <div className='md:w-[70%] grid gap-4 grid-cols-1 sm:grid-cols-2'>
-                    <div className='p-4'>
-                        <h1 className='text-lg font-normal'>First Heading</h1>
-                        <p className='font-extralight text-justify'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate, consequuntur temporibus? Voluptatem laudantium reiciendis rerum! Deleniti hic labore optio dolorem at, reprehenderit, expedita, neque harum excepturi voluptatibus delectus quasi quo.</p>
-                    </div>
-                    <div className='p-4 bg-orange-200'>
-                        <h1 className='text-lg font-normal'>Second Heading</h1>
-                        <p className='font-extralight text-justify'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate, consequuntur temporibus? Voluptatem laudantium reiciendis rerum! Deleniti hic labore optio dolorem at, reprehenderit, expedita, neque harum excepturi voluptatibus delectus quasi quo.</p>
-                    </div>
-                    <div className='p-4 bg-orange-200'>
-                        <h1 className='text-lg font-normal'>Third Heading</h1>
-                        <p className='font-extralight text-justify'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate, consequuntur temporibus? Voluptatem laudantium reiciendis rerum! Deleniti hic labore optio dolorem at, reprehenderit, expedita, neque harum excepturi voluptatibus delectus quasi quo.</p>
+                <div className='p-4 bg-orange-200'>
+                        <h1 className='text-lg font-normal'>Permit and Regulatory Compliance</h1>
+                        <p className='font-extralight text-justify'>Ensuring that your renovation complies with local building codes and regulations is crucial. We handle Obtaining necessary permits and approvals, Ensuring adherence to zoning laws and safety standards, Coordinating with regulatory agencies as needed.</p>
                     </div>
                     <div className='p-4'>
-                        <h1 className='text-lg font-normal'>Fourth Heading</h1>
-                        <p className='font-extralight text-justify'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate, consequuntur temporibus? Voluptatem laudantium reiciendis rerum! Deleniti hic labore optio dolorem at, reprehenderit, expedita, neque harum excepturi voluptatibus delectus quasi quo.</p>
+                        <h1 className='text-lg font-normal'>Design and Planning</h1>
+                        <p className='font-extralight text-justify'>Our design team collaborates with you to develop a renovation plan that aligns with your goals. This includes Conceptual design and layout modifications, Selection of materials and finishes, Creating detailed plans and timelines.
+                        </p>
+                    </div>
+                    
+                    
+                    <div className='p-4'>
+                        <h1 className='text-lg font-normal'>Construction and Execution</h1>
+                        <p className='font-extralight text-justify'>Our skilled team manages all aspects of the renovation process to ensure quality and efficiency. Key tasks include Demolition and site preparation, Structural repairs and modifications, Installation of new features and finishes.</p>
+                    </div>
+                    <div className='p-4 bg-orange-200'>
+                        <h1 className='text-lg font-normal'>Material Selection and Procurement</h1>
+                        <p className='font-extralight text-justify'>We assist you in choosing high-quality materials that fit your design vision and budget. This includes Sourcing durable and stylish materials, Coordinating with suppliers and managing deliveries, Ensuring that all materials meet project specifications.</p>
                     </div>
                 </div>
     

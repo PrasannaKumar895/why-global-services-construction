@@ -40,7 +40,7 @@ const Construction = () => {
             <div className='flex flex-col md:flex-row justify-between gap-2 mt-4'>
                 {/* Left Column */}
                 <div className='md:w-[30%] bg-gray-800 text-white p-4 text-justify rounded-r-xl'>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, aut. Libero, culpa vitae? Ullam, quod hic neque similique perferendis atque et aliquam sit, harum enim sed consequuntur. Delectus, sint illum!</p>
+                    <p>Construction planning is the foundation of a successful project. Our methodical approach ensures that every detail of your construction project is meticulously organized and executed, from the initial concept through to the final build. By integrating advanced planning techniques and industry best practices, we guarantee that your project runs smoothly, stays on schedule, and meets your quality expectations.</p>
                 </div>
 
                 {/* Right Column - Image Grid */}
@@ -75,20 +75,20 @@ const Construction = () => {
             <div className='flex flex-col md:flex-row gap-5 mt-8'>
                 <div className='md:w-[70%] grid gap-4 grid-cols-1 sm:grid-cols-2'>
                     <div className='p-4'>
-                        <h1 className='text-lg font-normal'>First Heading</h1>
-                        <p className='font-extralight text-justify'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate, consequuntur temporibus? Voluptatem laudantium reiciendis rerum! Deleniti hic labore optio dolorem at, reprehenderit, expedita, neque harum excepturi voluptatibus delectus quasi quo.</p>
+                        <h1 className='text-lg font-normal'>Site Analysis and Preparation</h1>
+                        <p className='font-extralight text-justify'>Conducting a thorough site analysis is crucial for understanding the physical, environmental, and regulatory aspects of the construction area. This includes Site surveys and geotechnical studies, Environmental impact assessments, Utility and infrastructure evaluations</p>
                     </div>
                     <div className='p-4 bg-orange-200'>
-                        <h1 className='text-lg font-normal'>Second Heading</h1>
-                        <p className='font-extralight text-justify'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate, consequuntur temporibus? Voluptatem laudantium reiciendis rerum! Deleniti hic labore optio dolorem at, reprehenderit, expedita, neque harum excepturi voluptatibus delectus quasi quo.</p>
+                        <h1 className='text-lg font-normal'>Resource Planning</h1>
+                        <p className='font-extralight text-justify'>Effective construction planning involves precise resource management. We plan for Material procurement and delivery schedules, Equipment and machinery needs, Labor requirements and subcontractor coordination</p>
                     </div>
                     <div className='p-4 bg-orange-200'>
-                        <h1 className='text-lg font-normal'>Third Heading</h1>
-                        <p className='font-extralight text-justify'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate, consequuntur temporibus? Voluptatem laudantium reiciendis rerum! Deleniti hic labore optio dolorem at, reprehenderit, expedita, neque harum excepturi voluptatibus delectus quasi quo.</p>
+                        <h1 className='text-lg font-normal'>Budget Management</h1>
+                        <p className='font-extralight text-justify'>Construction planning also involves detailed budgeting to ensure financial control. This includes Cost estimation and tracking, Managing changes and unexpected expenses, Financial reporting and adjustments</p>
                     </div>
                     <div className='p-4'>
-                        <h1 className='text-lg font-normal'>Fourth Heading</h1>
-                        <p className='font-extralight text-justify'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate, consequuntur temporibus? Voluptatem laudantium reiciendis rerum! Deleniti hic labore optio dolorem at, reprehenderit, expedita, neque harum excepturi voluptatibus delectus quasi quo.</p>
+                        <h1 className='text-lg font-normal'>Schedule Development</h1>
+                        <p className='font-extralight text-justify'>We create a detailed construction schedule that outlines all phases of the project, including Key milestones and deadlines, Task dependencies and sequencing, Gantt charts and progress tracking tools</p>
                     </div>
                 </div>
     

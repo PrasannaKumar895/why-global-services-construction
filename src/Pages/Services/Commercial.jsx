@@ -38,8 +38,11 @@ const Commercial = () => {
     
             {/* Main Content */}
             <div className='flex flex-col md:flex-row justify-between gap-2 mt-4'>
-               
-
+                {/* Left Column */}
+                <div className='md:w-[30%] bg-gray-800 text-white p-4 text-justify rounded-r-xl'>
+                    <p>Commercial construction projects require a meticulous approach to meet the complex demands of businesses and commercial properties. From office buildings to retail spaces and industrial facilities, our expert team ensures that every project is executed with precision, efficiency, and a focus on delivering long-term value. We manage every aspect of commercial construction to help you achieve your business objectives.</p>
+                </div>
+ 
                 {/* Right Column - Image Grid */}
                 <div className='md:w-[65%] flex flex-col gap-10 mt-4 md:mt-0'>
                     <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4'>
@@ -66,10 +69,7 @@ const Commercial = () => {
                        
                     </div>
                 </div>
-                 {/* Left Column */}
-                 <div className='md:w-[30%] bg-gray-800 text-white p-4 text-justify rounded-r-xl'>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, aut. Libero, culpa vitae? Ullam, quod hic neque similique perferendis atque et aliquam sit, harum enim sed consequuntur. Delectus, sint illum!</p>
-                </div>
+                
             </div>
 
             {/* Additional Sections */}
@@ -86,20 +86,20 @@ const Commercial = () => {
 
                 <div className='md:w-[70%] grid gap-4 grid-cols-1 sm:grid-cols-2'>
                     <div className='p-4'>
-                        <h1 className='text-lg font-normal'>First Heading</h1>
-                        <p className='font-extralight text-justify'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate, consequuntur temporibus? Voluptatem laudantium reiciendis rerum! Deleniti hic labore optio dolorem at, reprehenderit, expedita, neque harum excepturi voluptatibus delectus quasi quo.</p>
+                        <h1 className='text-lg font-normal'>Pre-Construction Planning and Consultation</h1>
+                        <p className='font-extralight text-justify'>We start with a thorough consultation to understand your business needs and project goals. Our pre-construction planning includes Feasibility studies and site assessments, Conceptual design and space planning, Budgeting and financial planning</p>
                     </div>
                     <div className='p-4 bg-orange-200'>
-                        <h1 className='text-lg font-normal'>Second Heading</h1>
-                        <p className='font-extralight text-justify'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate, consequuntur temporibus? Voluptatem laudantium reiciendis rerum! Deleniti hic labore optio dolorem at, reprehenderit, expedita, neque harum excepturi voluptatibus delectus quasi quo.</p>
+                        <h1 className='text-lg font-normal'>Design and Architectural Services</h1>
+                        <p className='font-extralight text-justify'>Our design team works closely with you to develop functional and innovative designs that meet your commercial requirements. This includes Architectural design and layout optimization, Interior design and branding integration, Compliance with zoning and regulatory requirements</p>
                     </div>
                     <div className='p-4 bg-orange-200'>
-                        <h1 className='text-lg font-normal'>Third Heading</h1>
-                        <p className='font-extralight text-justify'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate, consequuntur temporibus? Voluptatem laudantium reiciendis rerum! Deleniti hic labore optio dolorem at, reprehenderit, expedita, neque harum excepturi voluptatibus delectus quasi quo.</p>
+                        <h1 className='text-lg font-normal'>Construction Management</h1>
+                        <p className='font-extralight text-justify'>Effective construction management ensures that your project is completed on time and within budget. We manage Scheduling and coordination of construction activities, Supervision of on-site work and subcontractors, Quality control and adherence to safety standards</p>
                     </div>
                     <div className='p-4'>
-                        <h1 className='text-lg font-normal'>Fourth Heading</h1>
-                        <p className='font-extralight text-justify'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate, consequuntur temporibus? Voluptatem laudantium reiciendis rerum! Deleniti hic labore optio dolorem at, reprehenderit, expedita, neque harum excepturi voluptatibus delectus quasi quo.</p>
+                        <h1 className='text-lg font-normal'>Completion and Handover</h1>
+                        <p className='font-extralight text-justify'>Upon project completion, we conduct a thorough inspection and final walkthrough to ensure everything meets your expectations. We provide Comprehensive documentation and operational manuals, Post-construction support and maintenance options, Assistance with tenant fit-outs and occupancy readiness</p>
                     </div>
                 </div>
     

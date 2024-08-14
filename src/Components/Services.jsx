@@ -18,20 +18,21 @@ export const Services = () => {
         { name: "Residential Construction", icon: <IoHome />, title: "Quality Residential Construction", description: "Building homes with superior craftsmanship and attention to detail, ensuring comfort and durability." },
         { name: "Commercial Construction", icon: <BsBuildingFillGear />, title: "Robust Commercial Construction", description: "From office buildings to retail spaces, we deliver commercial construction solutions that meet your business needs." },
         { name: "Renovation and Remodeling", icon: <FaHammer />, title: "Expert Renovation and Remodeling", description: "Transform existing spaces with our renovation and remodeling services, adding value and functionality to your property" },
-        { name: "Interior Design", icon: <MdChair />, title: "Stylish Interior Design", description: "Our interior design services bring your spaces to life with creative and practical solutions." },
-        { name: "Sustainable Building", icon: <PiPlantFill />, title: "Sustainable Building Practices", description: "We incorporate eco-friendly and sustainable building practices to minimize environmental impact." },
+        // { name: "Interior Design", icon: <MdChair />, title: "Stylish Interior Design", description: "Our interior design services bring your spaces to life with creative and practical solutions." },
+        // { name: "Sustainable Building", icon: <PiPlantFill />, title: "Sustainable Building Practices", description: "We incorporate eco-friendly and sustainable building practices to minimize environmental impact." },
     ];
 
     const [hoveredIndex, setHoveredIndex] = useState(null);
 
     return (
+        <div>
         <div className='w-[95%] flex flex-col items-center rounded-lg py-2'>
             <div className="flex flex-col items-center justify-center mb-3">
                 <h2 className='text-center text-2xl md:text-2xl lg:text-[2rem] text-orange-600 font-semibold'>Comprehensive Construction Solutions</h2>
                 <p className='font-light text-md md:text-base lg:text-lg'>From Concept to Completion</p>
             </div>
 
-            <div className='grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 lg:w-[90%] w-[80%] justify-center items-center gap-5 bg-transparent p-2'>
+            <div className='grid lg:grid-cols-3 md:grid-cols-2 lg:w-[90%] w-[80%] justify-center items-center gap-5 bg-transparent p-2'>
                 {services.map((item, index) => (
                     <div 
                         key={index} 
@@ -58,7 +59,14 @@ export const Services = () => {
                         )}  
                     </div>
                 ))}
-            </div>
+            </div>      
         </div>
+        <div className='flex flex-col items-end pr-44 md:pr-32 lg:pr-32'>
+  <button className='border bg-white rounded-md p-2 text-blue-950 hover:bg-gray-100 transition-colors duration-300'>
+    Know More
+  </button>
+</div>
+
+      </div>
     );
 };
