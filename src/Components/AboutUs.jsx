@@ -7,7 +7,7 @@ import IMG8 from '../images/IMG8.jpg';
 
 export const About = () => {
     return (
-        <div className='flex flex-col md:flex-row items-center justify-center bg-white py-20 px-6 md:px-12 lg:px-24'>
+        <div className='flex flex-col md:flex-row items-center justify-center bg-white   pb-20 lg:pb-20 px-6 md:px-12 lg:px-24'>
             {/* Left Side: Heading and Content */}
             <div className='flex flex-col gap-3 w-full md:w-1/2 mb-8 md:mb-0 md:pr-8'>
                 <h2 className='text-xl md:text-2xl lg:text-[2rem] text-orange-600 font-semibold mb-3'>
