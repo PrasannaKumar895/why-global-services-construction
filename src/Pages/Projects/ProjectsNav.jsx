@@ -1,8 +1,17 @@
-import React from 'react';
+import {React, useEffect} from 'react';
 import { Link, Outlet} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 
 const OurProject = () => {
+
+  // const navigate = useNavigate();
+
+  // useEffect(() => {
+  //   // Automatically navigate to /services/architecture when /services is accessed
+  //   navigate('/services/architecture');
+  // }, [navigate]);
+
   let porjectLinks = [
     { name: "MODERN HIGH-RISE BUILDING", link: "/projects/high_rise" },
     { name: "LUXURY RESIDENTIAL COMPLEX", link: "/projects/luxury" },
@@ -10,7 +19,7 @@ const OurProject = () => {
   ];
 
   return (
-    <div className="px-4 ">
+    <div className="px-4  ">
       <nav className="flex justify-evenly flex-wrap lg:gap-8 gap-2 ">
         {porjectLinks.map((item, index) => (
           <p

@@ -56,7 +56,7 @@ const High = () => {
     ]
 
     return (
-        <div className='p-4 sm:p-6 lg:py-4'>
+        <div className='p-4 sm:p-6 lg:py-12'>
             <h2 className='font-medium text-lg px-4 pb-2'>Modern High-Rise Building</h2>
             <p className='font-extralight text-justify px-4 pb-4'>
                 A state-of-the-art high-rise project featuring contemporary design and advanced construction techniques.

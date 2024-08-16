@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Fade } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css';
 import { useMediaQuery } from 'react-responsive';
@@ -14,15 +14,25 @@ const fadeImages = [
 
 export const ImageSlider = () => {
   const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' });
+  
+  // Create a ref for the target section
+  const targetSectionRef = useRef(null);
+
+  // Function to handle button click and scroll to target section
+  const scrollToSection = () => {
+    if (targetSectionRef.current) {
+      targetSectionRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
-    <div className="pt-16">
-      <Fade duration={3000} transitionDuration={2500} indicators={true} arrows={true}>
+    <div >
+      <Fade duration={3000} transitionDuration={2500} indicators={false} arrows={true}>
         {fadeImages.map((fadeImage, index) => (
           <div
             key={index}
             className={`flex flex-col items-center justify-center bg-cover ${isTabletOrMobile ? 'h-[500px]' : 'h-[600px]'} bg-center relative transition-all duration-1000 ease-in-out`}
-            style={{ backgroundImage: `url(${fadeImage.url})` }}
+            style={{ backgroundImage: `url(${fadeImage.url})`}}
           >
             <div className="absolute top-0 left-0 w-full h-full bg-black/40 z-10 transition-all duration-1000 ease-in-out"></div>
             <div className={`relative h-full w-full p-5 flex flex-col ${index === 1 || index === 2 ? 'items-start' : 'items-center'} justify-center z-20`}>
@@ -53,13 +63,22 @@ export const ImageSlider = () => {
                 </>
               )}
               <div className={`flex gap-2.5 ${index === 1 || index === 2 ? 'justify-start' : 'justify-center'}`}>
-                <button className={`px-6 sm:px-8 py-2 border-2 border-[#fab702] bg-[#fab702] text-white cursor-pointer rounded transition-colors duration-300 ease-in-out text-xs sm:text-sm ${index === 1 || index === 2 ? 'ml-[20px] sm:ml-[150px]' : ''}`}>EXPLORE</button>
-                <button className={`px-6 sm:px-8 py-2 border-2 border-[#fab702] bg-white text-black cursor-pointer rounded transition-colors duration-300 ease-in-out text-xs sm:text-sm ${index === 1 || index === 2 ? 'ml-2.5' : ''}`}>BUY NOW</button>
+                <button
+                  className={`px-6 sm:px-8 py-2  bg-orange-600 text-white cursor-pointer rounded transition-colors duration-300 ease-in-out text-xs sm:text-sm ${index === 1 || index === 2 ? 'ml-[20px] sm:ml-[150px]' : ''}`}
+                  onClick={scrollToSection} // Add onClick handler
+                >
+                  EXPLORE
+                </button>
+                <button className={`px-6 sm:px-8 py-2 bg-white text-black cursor-pointer rounded transition-colors duration-300 ease-in-out text-xs sm:text-sm ${index === 1 || index === 2 ? 'ml-2.5' : ''}`}>BUY NOW</button>
               </div>
             </div>
           </div>
         ))}
       </Fade>
+      
+      {/* Target section */}
+      <div ref={targetSectionRef} className="pt-16">
+      </div>
     </div>
   );
 };

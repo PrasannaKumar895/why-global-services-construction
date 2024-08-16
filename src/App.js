@@ -19,18 +19,19 @@ import Commercial from './Pages/Services/Commercial';
 import Renovation from './Pages/Services/Renovation';
 import { AboutUs } from './Pages/AboutUs';
 import OurProject from './Pages/Projects/ProjectsNav';
-import High from './Pages/Projects/RiseBuilding';
-import Blog from './Pages/Blogs';
+import High from './Pages/Projects/RiseBuilding'
+import Blog from './Pages/Blog'
 import LuxuryBuilding from './Pages/Projects/LuxuryBuilding';
 import CommercialBuilding from './Pages/Projects/CommercialBuilding';
-import PostDetail from './Components/PostDetail';
-
+import {ScrollToTop} from './Utilities/ScrollToTop'
 
 function App() {
   return (
-    <div>
+    <div className='font-inter'>
     <NavBar/>
-    <div className='mt-20'>
+    <ScrollToTop/>
+    <div className='mt-[70px]'>
+
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/services' element={<OurServices/>}>
@@ -48,11 +49,7 @@ function App() {
         </Route>
   
         <Route path='/about-us' element={<AboutUs/>}/>
-        <Route path='/blog' element={<Blog/>}>
-        <Route path='construction-engineering' element={<PostDetail/>}/>
-        <Route path='mechanical-engineering' element={<PostDetail/>}/>
-        <Route path='industrial-chemicals' element={<PostDetail/>}/>
-        </Route>
+        <Route path='/blog' element={<Blog/>}/>
 
         <Route path='/contact' element={<Contact/>}/>
       </Routes>

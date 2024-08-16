@@ -43,20 +43,20 @@ const Footer = () => {
           {/* Services Areas */}
           <div>
             <h2 className="text-xl font-bold mb-4 border-b-2 border-gray-600 pb-2 ">Services Areas</h2>
-            <a href="#" className="block mb-2 hover:text-orange-400">Building Construction</a>
+            <a href="#" className="block mb-2 hover:text-orange-400">Commercial Construction</a>
             <a href="#" className="block mb-2 hover:text-orange-400">House Renovation</a>
             <a href="#" className="block mb-2 hover:text-orange-400">Architecture Design</a>
-            <a href="#" className="block mb-2 hover:text-orange-400">Interior Design</a>
-            <a href="#" className="block mb-2 hover:text-orange-400">Painting</a>
+            <a href="#" className="block mb-2 hover:text-orange-400">Project Management</a>
+            <a href="#" className="block mb-2 hover:text-orange-400">Construction Planning</a>
           </div>
 
           {/* Useful Pages */}
           <div>
             <h2 className="text-xl font-bold mb-4 border-b-2 border-gray-600 pb-2">Useful Pages</h2>
-            <a href="#" className="block mb-2 hover:text-orange-400">About Us</a>
-            <a href="#" className="block mb-2 hover:text-orange-400">Contact Us</a>
-            <a href="#" className="block mb-2 hover:text-orange-400">Our Team</a>
-            <a href="#" className="block mb-2 hover:text-orange-400">Projects</a>
+            <a href="/about-us" className="block mb-2 hover:text-orange-400">About Us</a>
+            <a href="/contact" className="block mb-2 hover:text-orange-400">Contact Us</a>
+            <a href="/blog" className="block mb-2 hover:text-orange-400">Blog</a>
+            <a href="/projects" className="block mb-2 hover:text-orange-400">Projects</a>
             <a href="#" className="block mb-2 hover:text-orange-400">Testimonial</a>
           </div>
 
@@ -83,7 +83,7 @@ const Footer = () => {
       {/* Copyright */}
       <div className="container mx-auto mt-8">
         <div className="flex items-center justify-center text-sm"> 
-            <p>&copy; <a href="#" className="hover:text-orange-400">Your Site Name</a>, All Rights Reserved.</p>
+            <p>&copy; <a href="#" className="hover:text-orange-400">Why Themes</a>, All Rights Reserved.</p>
           
         </div>
       </div>

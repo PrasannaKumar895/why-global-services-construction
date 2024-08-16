@@ -1,11 +1,9 @@
 import React from 'react';
-import IMG3 from '../images/IMG3.jpg'; // Replace with actual image paths
-import IMG5 from '../images/IMG5.jpg'
-import IMG9 from '../images/IMG5 (2).jpg'
-import IMG8 from '../images/IMG8.jpg'
-
-
-
+import { Link } from 'react-router-dom'; 
+import IMG3 from '../images/IMG3.jpg'; 
+import IMG5 from '../images/IMG5.jpg';
+import IMG9 from '../images/IMG5 (2).jpg';
+import IMG8 from '../images/IMG8.jpg';
 
 export const About = () => {
     return (
@@ -22,24 +20,27 @@ export const About = () => {
                     Our mission is to create sustainable and efficient solutions that meet the unique needs of each client. We believe in the power of collaboration and work closely with our clients to bring their visions to life.
                 </p>
                 <p className='text-gray-700 text-justify font-thin text-base md:text-lg lg:text-md '>
-                    We are a dedicated team of professionals committed to delivering high-quality projects. 
+                    We are a dedicated team of professionals committed to delivering high-quality projects.
                 </p>
                 <div>
-                <button className=' border border-orange-600 hover:bg-orange-600 hover:text-white rounded-md px-3 py-1'> Read More... </button>
+                    <Link 
+                        to='/about-us' 
+                        className='border border-orange-600 hover:bg-orange-600 hover:text-white rounded-md px-3 py-1 inline-block text-center'
+                    >
+                        Read More...
+                    </Link>
                 </div>
-               
             </div>
 
             {/* Right Side: Image Collage with Different Angles */}
             <div className='w-full md:w-1/2'>
-                <div className='grid grid-cols-2 grid-rows-2 '>
-                    <img src={IMG3} alt='Team Image 1' className='w-full h-40 md:h-48 lg:h-70 object-cover rounded-lg transform rotate-12 border-8  border-orange-500' />
-                    <img src={IMG5} alt='Team Image 2' className='w-full h-40 md:h-48 lg:h-70 object-cover rounded-lg transform -rotate-3 border-8  border-orange-500' />
-                    <img src={IMG8} alt='Team Image 3' className='w-full h-40 md:h-48 lg:h-70 object-cover rounded-lg transform rotate-6 border-8  border-orange-500' />
-                    <img src={IMG9} alt='Team Image 4' className='w-full h-40 md:h-48 lg:h-70 object-cover rounded-lg transform -rotate-6 border-8  border-orange-500' />
+                <div className='grid grid-cols-2 grid-rows-2'>
+                    <img src={IMG3} alt='Team Image 1' className='w-full h-40 md:h-48 lg:h-70 object-cover rounded-lg transform rotate-12 border-4 border-orange-500' />
+                    <img src={IMG5} alt='Team Image 2' className='w-full h-40 md:h-48 lg:h-70 object-cover rounded-lg transform -rotate-3 border-4 border-orange-500' />
+                    <img src={IMG8} alt='Team Image 3' className='w-full h-40 md:h-48 lg:h-70 object-cover rounded-lg transform rotate-6 border-4 border-orange-500' />
+                    <img src={IMG9} alt='Team Image 4' className='w-full h-40 md:h-48 lg:h-70 object-cover rounded-lg transform -rotate-6 border-4 border-orange-500' />
                 </div>
             </div>
-        </div>
-    );
-
-}
+        </div>
+    );
+};

@@ -3,7 +3,7 @@ import IMG1 from '../images/IMG1.jpg';
 
 export const AboutUs = () => {
   return (
-    <div className='pb-20'>
+    <div>
               <div className="bg-gray-800 text-white text-center ">
           <img
             src={IMG1}

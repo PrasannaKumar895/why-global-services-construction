@@ -1,9 +1,17 @@
-import React from 'react';
+import {React, useEffect} from 'react';
 import { Link, Outlet} from 'react-router-dom';
-
+import { useNavigate } from 'react-router-dom';
 
 
 const OurServices = () => {
+  // const navigate = useNavigate();
+
+  // useEffect(() => {
+  //   // Automatically navigate to /services/architecture when /services is accessed
+  //   navigate('/services/architecture');
+  // }, [navigate]);
+
+  // services
   let serviceLinks = [
     { name: "Architectural Design", link: "/services/architecture" },
     { name: "Project Management", link: "/services/pro_management" },
