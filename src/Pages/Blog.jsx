@@ -210,7 +210,7 @@ import { IoCallOutline } from "react-icons/io5";
                 </div>
                 <div className="mt-4 flex justify-between lg:gap-10 gap-5 items-center">
                     <div className="flex items-center lg:gap-3  gap-1">
-                        {renderStars(rating[post.id])}
+                        {/* {renderStars(rating[post.id])} */}
                     </div>
                     <button
                         onClick={() => handlePostClick(post)}
