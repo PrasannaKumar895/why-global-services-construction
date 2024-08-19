@@ -11,7 +11,7 @@ const NavBar = () => {
     const links = [
         { name: "HOME", link: "/" },
         {
-            name: "SERVICES", link: "/services", subLinks: [
+            name: "SERVICES", subLinks: [
                 { name: "ARCHITECTURAL DESIGN", link: "/services/architecture" },
                 { name: "PROJECT MANAGEMENT", link: "/services/pro_management" },
                 { name: "CONSTRUCTION PLANNING", link: "/services/construction" },
@@ -47,18 +47,25 @@ const NavBar = () => {
                 </div>
 
                 {/* Navigation Links */}
-                <ul className={`md:flex md:items-center absolute md:static bg-white shadow-none md:z-auto z-[-1] right-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-linear ${open ? 'top-19 opacity-100 w-1/2 rounded-md shadow-xl ' : 'top-[-460px]'} md:opacity-100 opacity-0`} >
+                <ul className={`md:flex md:items-center absolute md:static bg-white shadow-none md:z-auto z-[-1] right-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-linear ${open ? 'top-19 opacity-100 w-1/2 rounded-md shadow-xl lg:shadow-none' : 'top-[-460px] shadow-none'} md:opacity-100 opacity-0`} >
                     {links.map((link) => (
-                        <li key={link.name} className='md:ml-8 text-sm text-gray-800 hover:text-orange-600 duration-500 md:my-0 my-7 relative group'>
-                            <Link to={link.link}>
-                                {link.name}
-                            </Link>
+                         <li key={link.name} className='md:ml-8 text-sm text-gray-800 hover:text-orange-600 duration-500 md:my-0 my-7 relative group'>
+                     
+                            {link.subLinks ? (
+                                <div className="cursor-default">
+                                    {link.name}
+                                </div>
+                            ) : (
+                                <Link to={link.link} onClick={()=>{setOpen(false)}}>
+                                    {link.name}
+                                </Link>
+                            )}
                             {/* Submenu */}
                             {link.subLinks && (
                                 <ul className="absolute left-0 top-3 mt-2 bg-white shadow-lg rounded-lg w-48 hidden group-hover:block z-50">
                                     {link.subLinks.map((subLink) => (
                                         <li key={subLink.name} className="text-sm text-gray-800 hover:text-orange-600 py-2 px-4">
-                                            <Link to={subLink.link}>
+                                            <Link to={subLink.link} onClick={()=>{setOpen(false)}}>
                                                 {subLink.name}
                                             </Link>
                                         </li>
@@ -110,10 +117,12 @@ const NavBar = () => {
                             </button>
                         </div>
                     </div>
-)}
+            )}
 
         </div>
     );
 }
 
 export default NavBar;
+
+

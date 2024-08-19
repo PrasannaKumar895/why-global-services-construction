@@ -1,29 +1,11 @@
-import {React, useEffect} from 'react';
-import { Link, Outlet} from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
-
+import { React } from 'react';
+import { Outlet } from 'react-router-dom';
 
 const OurServices = () => {
-  // const navigate = useNavigate();
-
-  // useEffect(() => {
-  //   // Automatically navigate to /services/architecture when /services is accessed
-  //   navigate('/services/architecture');
-  // }, [navigate]);
-
-  // services
-  let serviceLinks = [
-    { name: "Architectural Design", link: "/services/architecture" },
-    { name: "Project Management", link: "/services/pro_management" },
-    { name: "Construction Planning", link: "/services/construction" },
-    { name: "Residential Construction", link: "/services/residential" },
-    { name: "Commercial Construction", link: "/services/commercial" },
-    { name: "Renovation and Remodeling", link: "/services/renovation" },
-  ];
-
   return (
     <div className="px-4">
-      <nav className="flex justify-evenly flex-wrap lg:gap-6 gap-2 ">
+      {/* Remove or comment out the navigation code to prevent rendering the list of services */}
+      {/* <nav className="flex justify-evenly flex-wrap lg:gap-6 gap-2 ">
         {serviceLinks.map((item, index) => (
           <p
             key={index}
@@ -35,11 +17,9 @@ const OurServices = () => {
             </Link>
           </p>
         ))}
-      </nav>
-     
+      </nav> */}
       
-     <Outlet />
-    
+      <Outlet />
     </div>
   );
 };

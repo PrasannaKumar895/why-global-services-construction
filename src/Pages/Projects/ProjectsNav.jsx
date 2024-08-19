@@ -19,7 +19,7 @@ const OurProject = () => {
   ];
 
   return (
-    <div className="px-4  ">
+    <div className="px-4 ">
       <nav className="flex justify-evenly flex-wrap lg:gap-8 gap-2 ">
         {porjectLinks.map((item, index) => (
           <p

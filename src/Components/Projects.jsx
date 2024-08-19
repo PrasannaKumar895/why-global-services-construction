@@ -1,36 +1,38 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom'; 
-import IMG4 from '../images/IMG4.jpg';
-import IMG4Hover from '../images/IMG4Hover.jpg';
-import IMG6 from '../images/IMG6.jpg';
-import IMG6Hover from '../images/IMG6Hover.jpg';
-import IMG7 from '../images/IMG7.jpg';
-import IMG7Hover from '../images/IMG7Hover.jpg';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import IMG4 from "../images/IMG4.jpg";
+import IMG4Hover from "../images/IMG4Hover.jpg";
+import IMG6 from "../images/IMG6.jpg";
+import IMG6Hover from "../images/IMG6Hover.jpg";
+import IMG7 from "../images/IMG7.jpg";
+import IMG7Hover from "../images/IMG7Hover.jpg";
 
 const projects = [
-    {
-        Img: IMG4,
-        ImgHover: IMG4Hover,
-        title: "Modern High-Rise Building",
-        description: "A state-of-the-art high-rise project featuring contemporary design and advanced construction techniques.",
-        link: "/projects/high_rise" //  link for navigation
-    },
-    {
-        Img: IMG6,
-        ImgHover: IMG6Hover,
-        title: "Contemporary Office Complex",
-        description: "A modern office complex designed to foster collaboration and innovation with cutting-edge facilities.",
-        link: "/projects/luxury" //  link for navigation
-    },
-    {
-        Img: IMG7,
-        ImgHover: IMG7Hover,
-        title: "Luxury Residential Tower",
-        description: "A luxurious residential tower offering premium amenities and panoramic views of the city.",
-        link: "/projects/commercial" // link for navigation
-    }
+  {
+    Img: IMG4,
+    ImgHover: IMG4Hover,
+    title: "Modern High-Rise Building",
+    description:
+      "A state-of-the-art high-rise project featuring contemporary design and advanced construction techniques.",
+    link: "/projects/high_rise", //  link for navigation
+  },
+  {
+    Img: IMG6,
+    ImgHover: IMG6Hover,
+    title: "Contemporary Office Complex",
+    description:
+      "A modern office complex designed to foster collaboration and innovation with cutting-edge facilities.",
+    link: "/projects/luxury", //  link for navigation
+  },
+  {
+    Img: IMG7,
+    ImgHover: IMG7Hover,
+    title: "Luxury Residential Tower",
+    description:
+      "A luxurious residential tower offering premium amenities and panoramic views of the city.",
+    link: "/projects/commercial", // link for navigation
+  },
 ];
-
 
 export const Project = () => {
   const [hoverIndex, setHoverIndex] = useState(null);
@@ -85,12 +87,12 @@ export const Project = () => {
                 <p className="text-sm text-justify text-black mb-2">
                   {item.description}
                 </p>
-                <Link 
-                                    to={item.link} // Use the link from the project data
-                                    className='cursor-pointer py-0.5 px-4 rounded-sm bg-orange-600 text-white hover:bg-gray-100 border hover:text-orange-600 hover:border hover:border-orange-600 transition-colors duration-1000 text-sm'
-                                >
-                                    More
-                                </Link>
+                <Link
+                  to={item.link} // Use the link from the project data
+                  className="cursor-pointer py-0.5 px-4 rounded-sm bg-orange-600 text-white hover:bg-gray-100 border hover:text-orange-600 hover:border hover:border-orange-600 transition-colors duration-1000 text-sm"
+                >
+                  More
+                </Link>
               </div>
             ))}
           </div>
