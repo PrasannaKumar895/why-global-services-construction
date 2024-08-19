@@ -353,7 +353,7 @@ const News_page = () => {
                  selectedCategory={selectedCategory}
              />
              
-                <div className="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-6 w-full px-4 lg:px-10" >
+                <div className="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-6 w-full px-2 lg:px-10" >
                 
                     {paginatedBlogs.map((blog) => (
                         <div
