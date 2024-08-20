@@ -109,13 +109,13 @@ const Architectural = () => {
             <div className='flex flex-col md:flex-row gap-5 mt-8'>
                 <div className='md:w-1/2'>
                     <h2 className='bg-orange-600 font-bold text-white px-4 py-2'>Addition Construction Step</h2>
-                    <p className='text-md text-justify font-medium mt-3'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt dignissimos, ipsum soluta earum in ratione esse facilis. Soluta eveniet ex dolorum, quaerat repudiandae perferendis corporis laborum reprehenderit optio maiores? Consectetur.</p>
+                    <p className='text-md text-justify font-medium mt-3'>Architectural design, encompasses advanced procedures that ensure the architectural integrity, functionality, and aesthetic appeal of your project. These steps are designed to enhance the overall design quality and execution:</p>
                     <ul className='flex flex-col justify-start mt-4'>
                         <li className='flex items-center gap-3 ml-4'><TiTick className='text-orange-600' /> Cost Reporting</li>
-                        <li className='flex items-center gap-3 ml-4'><TiTick className='text-orange-600' /> Project Management</li>
+                        <li className='flex items-center gap-3 ml-4'><TiTick className='text-orange-600' /> Material Selection and Customization</li>
                         <li className='flex items-center gap-3 ml-4'><TiTick className='text-orange-600' /> Quality Assurance</li>
                     </ul>
-                    <p className='mt-4'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque earum sunt harum consequuntur, nesciunt architecto.</p>
+                    <p className='mt-4'>These are the additional steps involved in refining and perfecting architectural designs, emphasizing quality, sustainability, and client satisfaction.</p>
                 </div>
                 <div className='md:w-1/2 bg-gray-800 rounded-md'>
                     <h2 className='text-xl px-10 pt-6 font-medium text-orange-600'>Service Provided</h2>
@@ -124,17 +124,17 @@ const Architectural = () => {
                             <img src={images[currentIndex]} alt="Slideshow" className='w-full h-full object-cover py-4 sm:py-8' />
                         </div>
                         <div className='w-full sm:w-1/2 p-5 flex flex-col gap-4 text-orange-600'>
-                            <p className='border-solid border-2 mt-4 px-4 py-2 border-white-500 hover:bg-orange-600 hover:text-white rounded-sm'>One</p>
-                            <p className='border-solid border-2 px-4 py-2 border-white-500 hover:bg-orange-600 hover:text-white rounded-sm'>Two</p>
-                            <p className='border-solid border-2 px-4 py-2 border-white-500 hover:bg-orange-600 hover:text-white rounded-sm'>Three</p>
-                            <p className='border-solid border-2 px-4 py-2 border-white-500 hover:bg-orange-600 hover:text-white rounded-sm'>Four</p>
+                            <p className='border-solid border-2 mt-4 px-4 py-2 border-white-500 hover:bg-orange-600 hover:text-white rounded-sm'>Cost Reporting</p>
+                            <p className='border-solid border-2 px-4 py-2 border-white-500 hover:bg-orange-600 hover:text-white rounded-sm'>Quality Assurance</p>
+                            <p className='border-solid border-2 px-4 py-2 border-white-500 hover:bg-orange-600 hover:text-white rounded-sm'>Sustainable Architecture</p>
+                            <p className='border-solid border-2 px-4 py-2 border-white-500 hover:bg-orange-600 hover:text-white rounded-sm'>Client-Centric Approach</p>
                         </div>
                     </div>
                 </div>
             </div>
 
             {/* Additional Content Section */}
-            <section className="py-16 flex justify-center items-center" id="section_2">
+            {/* <section className="py-16 flex justify-center items-center" id="section_2">
                 <div className="container mx-auto px-4">
                     <div className="flex flex-wrap gap-10 items-center">
                         <div className="flex justify-center w-full md:w-[40%] gap-10 items-center">
@@ -174,7 +174,7 @@ const Architectural = () => {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> */}
         </div>
     );
 }

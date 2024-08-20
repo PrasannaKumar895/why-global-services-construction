@@ -134,7 +134,7 @@ const Residential = () => {
             </div>
 
             {/* Additional Content Section */}
-            <section className="py-16 flex justify-center items-center" id="section_2">
+            {/* <section className="py-16 flex justify-center items-center" id="section_2">
                 <div className="container mx-auto px-4">
                     <div className="flex flex-wrap gap-10 items-center">
                         <div className="flex justify-center w-full md:w-[40%] gap-10 items-center">
@@ -174,7 +174,7 @@ const Residential = () => {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> */}
         </div>
     );
 }
