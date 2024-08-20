@@ -31,11 +31,12 @@ export const Testimonials = () => {
   ];
 
   return (
-    <div className="w-full h-auto lg:h-[100%] flex flex-col lg:flex-row p-4 lg:p-4 bg-orange-600">
-      <div className="lg:w-1/2 w-full h-auto lg:h-[100%] relative pb-0 overflow-hidden">
-        <p className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-white p-2 md:p-8 text-center lg:text-center">Testimonials</p>
+    <div className="w-full  px-4 py-4 md:px-6 md:py-6 lg:px-8 lg:py-0 lg:pt-10 ">
+      <div className=" w-full relative pb-0 overflow-hidden">
+        <p className='text-black text-center text-lg font-bold'>Testimonials</p>
+        <p className="text-2xl md:text-3xl lg:text-5xl font-bold text-black p-2 md:p-4 text-center lg:text-center">what our clients say<br/> about our company</p>
         <Slide
-          className="bg-white shadow-lg rounded-2xl p-6 lg:p-8 mx-auto"
+          className="bg-white  mx-auto"
           autoplay
           speed={6000}
           infinite
@@ -44,50 +45,22 @@ export const Testimonials = () => {
           dots={false}
         >
           {testimonials.map((item, index) => (
-            <div key={index} className="flex flex-wrap justify-center w-full p-2 md:p-4">
+            <div key={index} className="w-full p-2 ">
               {/* Each Slide Wrapper */}
-              <div className="flex flex-col items-center text-center bg-white p-4 md:p-5 rounded-lg shadow-md mx-2 w-full max-w-md lg:max-w-lg">
-                <div className="relative w-full flex items-center justify-center mb-4">
-                  <div className="absolute text-2xl md:text-3xl lg:text-4xl text-gray-900 left-4 md:left-5 top-2 md:top-3">“</div>
+              <div className="flex flex-col items-center text-center bg-white  w-full ">
+                <div className="relative w-full flex items-center justify-center ">
+                  <div className="absolute text-2xl md:text-3xl lg:text-4xl text-gray-900 left-4 md:left-5 top-2 md:top-3"></div>
                   <img src={item.profileImg} className="w-10 h-10 md:w-28 md:h-28 lg:w-32 lg:h-32 rounded-full mb-4" alt={`${item.name} profile`} />
                 </div>
-                <p className="text-sm md:text-base lg:text-lg text-gray-800 mb-4 md:mb-6 overflow-hidden">{item.description}</p>
-                <p className="text-base md:text-lg lg:text-xl font-extrabold text-gray-900 mb-1">{item.name}</p>
-                <p className="text-sm md:text-base lg:text-lg text-gray-600">{item.post}</p>
+                <p className="text-sm md:text-base lg:text-lg text-center px-6 md:w-1/2 text-gray-800 mb-4 overflow-hidden">{item.description}</p>
+                <p className="text-base md:text-lg lg:text-xl font-bold text-orange-600 mb-1">{item.name}</p>
+                {/* <p className="text-sm md:text-base lg:text-lg text-gray-600">{item.post}</p> */}
               </div>
             </div>
           ))}
         </Slide>
       </div>
-      {/* Left Side Div */}
-      <div className="lg:w-1/2 w-full flex justify-center items-center mb-8 lg:mb-0">
-        <div className="w-full h-full flex justify-center items-center">
-          <div className="bg-white shadow-lg rounded-2xl p-6 lg:p-8 max-w-md lg:max-w-lg w-full h-full flex flex-col">
-            <p className="text-orange-600 text-2xl lg:text-3xl font-bold mb-4 text-center">Get Quotation</p>
-            <form className="flex flex-col h-full">
-              <div className="grid gap-4 md:grid-cols-2 flex-grow">
-                <div>
-                  <p className="text-black text-base lg:text-lg font-semibold">Name</p>
-                  <input className="w-full h-10 lg:h-12 px-3 lg:px-4 text-base lg:text-lg border-b-2 border-gray-300 focus:outline-none rounded-md" type="text" name="FirstName" />
-                </div>
-                
-                <div>
-                  <p className="text-black text-base lg:text-lg font-semibold">Email</p>
-                  <input className="w-full h-10 lg:h-12 px-3 lg:px-4 text-base lg:text-lg border-b-2 border-gray-300 focus:outline-none rounded-md" type="email" name="Email" />
-                </div>
-               
-                <div className="md:col-span-2">
-                  <p className="text-black text-base lg:text-lg font-semibold mb-2 lg:mb-3">Message</p>
-                  <textarea className="w-full h-24 lg:h-32 px-3 lg:px-4 text-base lg:text-lg border-2 border-gray-200 rounded-lg bg-gray-100 focus:outline-none" placeholder="Write your message..."></textarea>
-                </div>
-              </div>
-              <button className="lg:mt-8 mt-4 bg-orange-600 text-white font-semibold py-2 lg:py-3 px-4 lg:px-6 rounded-full w-full md:w-auto">
-                Send Message
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
+      
 
       {/* Right Side Div for Slides */}
       

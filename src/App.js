@@ -4,7 +4,6 @@ import NavBar from './Components/NavBar';
 import { ImageSlider } from './Components/ImageSlide';
 import { Services } from './Components/Services';
 import Project from './Components/Projects';
-import { About } from './Components/AboutUs';
 import Footer from './Components/Footer';
 import { Testimonials } from './Components/Testiimonials';
 import { Route, Routes } from 'react-router-dom';
@@ -17,13 +16,13 @@ import Construction from './Pages/Services/Construction';
 import Residential from './Pages/Services/Residential';
 import Commercial from './Pages/Services/Commercial';
 import Renovation from './Pages/Services/Renovation';
-import { AboutUs } from './Pages/AboutUs';
 import OurProject from './Pages/Projects/ProjectsNav';
 import High from './Pages/Projects/RiseBuilding'
 import Blog from './Pages/Blog'
 import LuxuryBuilding from './Pages/Projects/LuxuryBuilding';
 import CommercialBuilding from './Pages/Projects/CommercialBuilding';
 import {ScrollToTop} from './Utilities/ScrollToTop'
+import { AboutUs } from './Pages/about/AboutUs';
 
 function App() {
   return (
