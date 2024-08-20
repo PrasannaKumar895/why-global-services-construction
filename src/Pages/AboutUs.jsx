@@ -1,17 +1,11 @@
 import React from 'react';
 import IMG1 from '../images/IMG1.jpg';
+import MainComponent from './main/MainComponent';
 
 export const AboutUs = () => {
   return (
     <div>
-              <div className="bg-gray-800 text-white text-center ">
-          <img
-            src={IMG1}
-            alt="About Us"
-            className="w-full h-[200px] object-cover rounded-lg"
-          />
-        </div>
-
+    <MainComponent/>
       {/* Our Services */}
       <div className="flex flex-col lg:flex-row w-full h-auto lg:h-screen p-4 lg:p-8 xl:p-20">
         {/* Text Div */}
